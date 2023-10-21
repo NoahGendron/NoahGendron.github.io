@@ -130,35 +130,25 @@
             </div>
 
             <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Exemples Vidéo</h3>
-              
-              <video src="/videos/test.mp4" controls width="500" height="320">
-                <source src="/videos/test.mp4">
-              </video>
-<br>
-              <video src="https://youtu.be/IHIBk3sMmO4" controls width="500" height="320">
-                <source src="http://www.youtube.com/embed/IHIBk3sMmO4?autoplay=1&origin=http://example.com">
-              </video>
-<br>
-              <iframe src="http://www.youtube.com/embed/IHIBk3sMmO4" width="640" height="360">test</iframe>
-              
+              <h3 class="project-details__content-title">Exemple Vidéo</h3>
+
               <div id="ytplayer"></div>
 
-<script>
-  var tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/player_api";
-  var firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+              <script>
+                  var tag = document.createElement('script');
+                  tag.src = "https://www.youtube.com/player_api";
+                  var firstScriptTag = document.getElementsByTagName('script')[0];
+                  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-  var player;
-  function onYouTubePlayerAPIReady() {
-    player = new YT.Player('ytplayer', {
-      height: '360',
-      width: '640',
-      videoId: 'IHIBk3sMmO4'
-    });
-  }
-</script>
+                  var player;
+                  function onYouTubePlayerAPIReady() {
+                  player = new YT.Player('ytplayer', {
+                    height: '360',
+                    width: '640',
+                    videoId: 'IHIBk3sMmO4'
+                  });
+                  }
+              </script>
 
             </div>
 
