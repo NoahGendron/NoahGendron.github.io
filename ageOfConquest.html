@@ -155,6 +155,13 @@
               class="project-details__showcase-img"
               />
 
+
+              <img
+              src="./assets/png/Lobby.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+              />
+
               <img
               src="./assets/png/Diremire.png"
               alt="Project Image"
@@ -196,35 +203,80 @@
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Conception</h3>
               
-              <h2>Combat/Gameplay</h2>
+              <h1>Combat/Gameplay</h1>
               <p>
                 
               </p>
 
-              <h2>IA/AI</h2>
+              <h1>IA/AI</h1>
               <p>
 
               </p>
 
-              <h2>Gamemodes</h2>
+              <h1>Gamemodes</h1>
 
-              <h3>Campagne</h3>
+              <h2>Campagne</h2>
               <p class="project-details__desc-para">
                 Le mode de campagne est fixée sur le PvE (joueurs contre IA) à travers divers objectifs que le joueur
-                complète durant des niveaux, seul ou avec jusqu'à 3 coéquipiers.
+                complète durant des missions, seul ou avec jusqu'à 3 coéquipiers.
+                <p>
+                  Ce mode semble plutôt simple en surface, mais il est le plus compliqué à développer, car il exige des niveaux fait à la main et raffiné spécifiquement pour que le joueur 
+                  puisse les explorer et accomplir certaines tâches programmées et personnalisé spécifiquement pour une mission, afin de les rendre uniques et variées. Le joueur peut éviter 
+                </p>
+                <p>
+                  La récompense obtenue par le joueur à la fin du niveau est complètement déterminée par le score qu'il obtient. Le score est déterminé par le nombre d'ennemis tués, du temps mis pour terminer la mission,
+                   en plus du nombre de morts. Ces facteurs vont déterminer le score, ce qui va dicter le <strong>pourcentage</strong> d'un total de 
+                  nombre de points d'expériences et d'or qui peuvent être obtenu lors de la réalisation du niveau. En général, si le pourcentage des récompenses est au-dessus de 50%, ça garantie le joueur de gagner
+                  au moins un item, même s'il a échouer la mission pour quelquonque raison (comme manque de temps ou manque de vies). Ce système s'applique à tous les autres modes de jeux.
+                </p>
               </p>
 
-              <h3>Survie</h3>
+              <h2>Survie</h2>
               <p class="project-details__desc-para">
-                Le mode de survie ou les joueurs, en équipe de jusqu'à 10, doivent protéger leur base de vague 
-                d'ennemis divers tout en gérant leurs fonds pour augmenter leurs propres statistiques au fil de la partie.
+                Le mode de survie ou les joueurs, en équipe de jusqu'à 10, doivent protéger leur base de vagues 
+                d'ennemis divers tout en gérant leurs fonds pour augmenter leurs propres statistiques au fil de la partie. 
+                Ce mode est le mode le plus simple et le plus direct d'Age of Conquest, mais il possède tout de même ses propres mécaniques qui le font ressortir du lot. 
+                <p>
+                  Le coeur de ce mode de jeu est déterminer par le système d'apparitions des ennemis. Avant chaque début d'une nouvelle vague d'ennemis, le jeu détermine le type de difficulté approprié 
+                  pour la vague et, parmi les vagues préfabriqués de chaque type, il en choisit une au hasard, puis, il fait apparaître les ennemis dans celle-ci. Toutefois, cela n'est pas automatique. Le système détermine en premier s'il 
+                  y a assez de joueurs présent pour faire apparaître chaque ennemi dans la vague. Après, il démarre un compte à rebours pour les ennemis qui prennent du temps à apparaître, car ça ne serait pas naturel si tous les ennemis
+                   d'une vague apparaissaient tous en même temps. Si les ennemis qui apparaissent au début de la vague sont éliminés avant que le compte à rebours des prochains ennemis termine, 
+                   les ennemis avec le plus petit compte à rebours vont tous apparaître en même temps. Chaque vague possède aussi une limite de temps, pour éviter que les joueurs jouent passivement.
+                  Ce système d'apprition d'ennemis s'applique, en partie, également au mode de campagne. 
+                </p>
+                <p>
+                  En plus d'augmenter le multiplicateur de difficulté à chaque fin de vague, le système donne alloue aussi un nombre de fonds au joueur. Ce nombre est déterminé par la difficulté de la vague dont les joueurs 
+                  ont survécu. Il est aussi grandement affecté par le temps qui a été pris pour complèter la vague, ainsi que le nombre de joueurs qui sont morts durant celle-ci. Ces fonds sont 
+                  distribués au joeur à la fin de la vague et peuvent ensuite être utilisés dans un menu exclusif au mode de survie, qui contient une liste de statistiques propre aux joueurs de l'équipe, comme 
+                  leur multiplicateur de dégâts, leurs points de vie bonus, leur vitesse d'attaque, etc. Chaque statistiques coûte un certain montant de fonds à augmenter. Les fonds servent aussi à 
+                  améliorer des murs qui protègent la base des joueurs au début du mode de survie. Par contre, les vagues d'ennemis peuvent facilement les détruire si les joueurs ne les défendent pas. 
+                </p>
               </p>
 
-              <h3>Bataille en équipe</h3>
+              <h2>Bataille en équipe</h2>
               <p class="project-details__desc-para">
                 Finalement, le mode de bataille en équipe permet au joueur de se battre contre à la fois d'autres joueurs ainsi que
-                des ennemis. Chaque équipe doit éliminer le Général de l'équipe adverse tout en défendant 
-                le sien.
+                des ennemis. C'est le mode le plus complexe d'Age of Conquest, contenant nombreuses mécaniques unique au mode, en plus de la présence de l'aspect PvP (joueur contre joueur)
+                 Le but de chaque équipe doit éliminer le Général (Type d'ennemi boss) de l'équipe adverse tout en défendant 
+                le sien. 
+                <p>
+                  Au début de la partie, les joueurs vont avoir à voter pour un chef d'équipe, qui pourra ensuite embaucher des travailleurs qui vont augmenter 
+                  les fonds de l'équipe qui lui serviront aussi à invoquer des renforts ou un boss. Les joueurs qui ne sont pas chef d'équipe ont aussi droit à leur propre réserve de fonds, qui peut leur servir 
+                  à réparé ou améliorer des structures, certaines structures servent à défendre une base et à fournir des bonus aux défenseurs IA d'un camp, d'autres peuvent abriter des archers qui réaparaissent
+                  tant que la structure n'est pas détruite, et enfin, il y a les casernes, qui produisent périodiquement des ennemis selon leur niveau d'amélioration. Les fonds de joueurs 
+                  peuvent aussi servir à acheter des avant-poste qui fournit périodiquement plus d'alliés.
+                </p>
+                
+                <p>
+                  Les joueurs accumulent des fonds en élminiant des ennemis ou des joueurs de l'autre camp, mais ils ne peuvent pas être trop précipités, car ils perdent une grand portion de leur 
+                  fonds à chaque mort. Se ruer vers la base du camp ennemi tout seul n'est pas encouragé parce que celles-ci sont beaucoup trop puissante pour un joueur qui n'est pas accompagné, surtout au début 
+                  de la partie. Pour balancer les combats entre joueurs, le niveau d'équipement est ajusté selon l'adversaire. De cette façon, les joueurs de bas niveau ont toujours une chance face aux joueurs plus expérimenté.
+                </p>
+
+                <p>
+                  Les cartes et les niveaux du mode sont équilibrées autour d'un niveau minimum ainsi que d'un niveau « maximum » (les statistiques d'un joueur plafonnent s'ils sont par-dessus le maximum).
+                  Certains aspects du jeux et types d'ennemis ne sont qu'accessibles dans les cartes exigeant des plus haut niveaux pour ne pas accabler le joueur dès le début.
+                </p>
               </p>
 
             </div>
