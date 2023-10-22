@@ -291,65 +291,73 @@
                 L'intelligence d'Age of Conquest est aussi complexe que modulaire. Pour que les ennemis puissent être utilisés dans tous les trois modes de jeu distinct, l'IA se repose sur trois types de 
                 mouvement: défensif, offensif et errant. 
                 <ul>
-                  <li class="project-details__desc-para">
+                  <li class="project-details__desc-li">
                     Les IA défensifs restent immobile jusqu'à ce qu'une cible entre leur portée d'attaque, si la cible les amènent trop loin, ils tentent de retourner à leur position de défense.
                   </li>
-                  <li class="project-details__desc-para">
+                  <li class="project-details__desc-li">
                     Les IA offensifs ont un chemin approximatif donné qui les dirigent vers un but spécifique, à l'aide du « Pathfinding ». 
                   </li>
-                  <li class="project-details__desc-para">
+                  <li class="project-details__desc-li">
                     Les IA errants sont comme les IA défensifs, sauf qu'ils se promènent d'une certaine distance de leur point de départ. 
                   </li>
                 </ul>
+              </p>
+
                 <br><br>
-                Chaque IA possède aussi certains paramètres optionnels qui peuvent modifier ses comportements:
+                <p class="project-details__desc-para">
+                  Chaque IA possède aussi certains paramètres optionnels qui peuvent modifier ses comportements:
+                </p>
+
                 <ul>
-                  <li class="project-details__desc-para">
+                  <li class="project-details__desc-li">
                     Les statistiques d'une IA <strong>individuel</strong> peuvent être ajustées dans des cas spécifiques pour certaines missions ou niveaux (Ex: 
                     Dégâts multiplicatif, vitesse, vitesse de course, vitesse d'attaque, la portée d'attaque, la vitesse d'une attaque spécifique, le temps de récupération, etc)
                   </li>
-                  <li class="project-details__desc-para">
+                  <li class="project-details__desc-li">
                     Faire infliger les attaques d'un IA des effets de status, comme le feu ou la glace. 
                   </li>
-                  <li>
+                  <li class="project-details__desc-li">
                     Une IA peut être enragé, le faisant attaquer plus vite.
                   </li>
-                  <li>
+                  <li class="project-details__desc-li">
                     Une IA peut avoir un champ de vision limité.
                   </li>
-                  <li>
+                  <li class="project-details__desc-li">
                     D'autres IA peuvent également suivre les joueurs s'ils ont l'option « Follower », ce système est utilisé dans le tutoriel.
                   </li>
-                  <li>
+                  <li class="project-details__desc-li">
                     Avoir un nom spécial.
                   </li>
-                  <li>
+                  <li class="project-details__desc-li">
                     Être plus grand/petit.
                   </li>
-                  <li>
+                  <li class="project-details__desc-li">
                     Être plus résistant ou immuniser contre certains effects, comme le feu. 
                   </li>
-                  <li>
+                  <li class="project-details__desc-li">
                     Fuir les cibles au lieu de les attaquer. 
                   </li>
                 </ul> 
 
                 <br><br>
-                Pour que les combats restent équitables, les IA ne peuvent pas normalement attaqués un joueur à plusieurs en même temps. En général, le joueur ne peut se faire attquer que par un ennemi en mêlée, et par un ennemi à distance.
-                 Toutefois, cette contrainte peut être contournée, si un IA est accordé le droit de le faire, étant donné que le joueur soit assez proche. Elle peut être aussi contournée si le joueur se trouve dans la base ennemi, 
-                 ou il peut être ciblée par un grand nombre d'IA. Heureusement, les IA ont beaucoup plus de difficultés à poursuivre les joueurs lorsqu'ils se font attaqués par d'autres IA, ils perdent donc 
-                 une grande partie de leur force rotationelle et leur vélocité, rendant les esquives idéales pour les combats à plusieurs. 
+                <p class="project-details__desc-para">
+                  Pour que les combats restent équitables, les IA ne peuvent pas normalement attaqués un joueur à plusieurs en même temps. En général, le joueur ne peut se faire attquer que par un ennemi en mêlée, et par un ennemi à distance.
+                  Toutefois, cette contrainte peut être contournée, si un IA est accordé le droit de le faire, étant donné que le joueur soit assez proche. Elle peut être aussi contournée si le joueur se trouve dans la base ennemi, 
+                  ou il peut être ciblée par un grand nombre d'IA. Heureusement, les IA ont beaucoup plus de difficultés à poursuivre les joueurs lorsqu'ils se font attaqués par d'autres IA, ils perdent donc 
+                  une grande partie de leur force rotationelle et leur vélocité, rendant les esquives idéales pour les combats à plusieurs. 
+                </p>
+               
 
                  <br><br>
-                 Enfin, au niveau des combats eux même chaque type d'ennemi possède ses propres animations et attaques avec leur propre temps d'attaque et de récupération. Les IA d'Age of Conquest sont des « state machines », et 
-                 donc, elles réagissent en changeant d'état, selon à quoi elle fait face. À chaque fois qu'un joueur se bat contre une IA, celle-ci va élaborer une stratégie, selon l'état et la postion/distnace du joueur. 
-                 Cette stratégie affecte ou l'IA va se positionner et quelle attaque elle va utiliser. Elle peut reculer si le joueur l'attaque, tenter d'encercler le joueur s'il se fait attaquer par d'autres ennemis, ou elle peut foncer si le joueur est trop loin. 
-                 Puis, elle peut décider laquelle de ses attaques elle devrait utiliser, si son adversaire est à la bonne distance. 
-                 Les ennemis en mêlée peuvent, en général, bloquer les coups de leurs adversaires, au risque de devenir vulnérable si leur posture se brise. D'autres peuvent esquiver les attaques, mais ils ne reçoivent pas de temps 
-                 d'invincibilité pour éviter de frustrer les joueurs. 
-                 Le tout est déterminé par une poignée de fonctions dans un seul script, lorsqu'il est fournit les paramètres d'un IA en combat. Le système réutilise le moins de code possible. 
-              </p>
-
+                 <p class="project-details__desc-para">
+                    Enfin, au niveau des combats eux même chaque type d'ennemi possède ses propres animations et attaques avec leur propre temps d'attaque et de récupération. Les IA d'Age of Conquest sont des « state machines », et 
+                    donc, elles réagissent en changeant d'état, selon à quoi elle fait face. À chaque fois qu'un joueur se bat contre une IA, celle-ci va élaborer une stratégie, selon l'état et la postion/distnace du joueur. 
+                    Cette stratégie affecte ou l'IA va se positionner et quelle attaque elle va utiliser. Elle peut reculer si le joueur l'attaque, tenter d'encercler le joueur s'il se fait attaquer par d'autres ennemis, ou elle peut foncer si le joueur est trop loin. 
+                    Puis, elle peut décider laquelle de ses attaques elle devrait utiliser, si son adversaire est à la bonne distance. 
+                    Les ennemis en mêlée peuvent, en général, bloquer les coups de leurs adversaires, au risque de devenir vulnérable si leur posture se brise. D'autres peuvent esquiver les attaques, mais ils ne reçoivent pas de temps 
+                    d'invincibilité pour éviter de frustrer les joueurs. 
+                    Le tout est déterminé par une poignée de fonctions dans un seul script, lorsqu'il est fournit les paramètres d'un IA en combat. Le système réutilise le moins de code possible. 
+                 </p>
             </div>
 
             <div class="project-details__tools-used">
