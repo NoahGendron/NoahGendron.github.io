@@ -443,6 +443,11 @@ textarea {
       .project-details__content-title {
         font-size: 2.4rem; } }
 
+        .project-details__sub {
+          font-weight: 700;
+          font-size: 2.3rem;
+          margin-bottom: 2.5rem; }
+
 .project-details__showcase-img-cont {
   width: 100%;
   margin-bottom: 6rem; }
