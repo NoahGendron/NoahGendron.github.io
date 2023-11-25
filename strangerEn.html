@@ -104,7 +104,7 @@
         <h1 class="heading-primary">Étranger (Outlander)</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
-            The development of Étranger (translated to Outlander in English) lasted took place during Autumn's 2023 and finished in late november.
+            The development of Étranger (translated to Outlander in English) took place during College Lionel-Groulx's Fall 2023 semester and finished in late november and lasted only four months.
           </p>
         </div>
         <!--<div class="project-cs-hero__cta">
@@ -126,14 +126,17 @@
             <div class="project-details__desc">
               <h3 class="project-details__content-title">Overview</h3>
               <p class="project-details__desc-para">
-                Age of Conquest is akin to an MMORP and an action adventure game, with three distinct game modes and 
-                a diverse array of content, like dozens of enemies, weapons and armor sets. Each gamemode can be played alone or in coop.
+                Outlander is a third-person action rogue-like, akin to <i>Risk of Rain 2</i>, the goal is to reach the final level or survive indefinitely while traveling across
+                environments to gather item upgrades and fight enemies in the fastest way possible, as the difficulty and spawn rates of enemies scales with time. Killing enemies gives your player experience points to level up and gold to spend at the item shop that can be reached
+                from defeating an environment's boss. Players are also rewarded with item upgrades upon defeating elite enemies summoned by spawners randomly scattered on each map.
+                During the four months given for Outlander's development, myself and the team were able to conceptualize, plan, organize and produce the entirety of the project,
+                which includes four distinct enemy factions, three unique classes, dozens of enemy types and over twenty item upgrades, as well as procedurally generated 3D maps.
               </p>
               
             </div>
 
             <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Demo</h3>
+              <h3 class="project-details__content-title">Trailer</h3>
 
               <div id="ytplayer"></div>
 
@@ -190,9 +193,9 @@
               />
 
               <img
-                      src="/assets/png/StrangerDeath.gif"
-                      alt="Project Image"
-                      class="project-details__showcase-img"
+                  src="/assets/png/StrangerDeath.gif"
+                  alt="Project Image"
+                  class="project-details__showcase-img"
               />
 
             </div>
@@ -200,179 +203,84 @@
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Design and Concept</h3>
 
-              <h1 class="project-details__sub">Gamemodes</h1>
+              <h1 class="project-details__sub">Classes</h1>
 
-              <h2>Campaign</h2>
               <p class="project-details__desc-para">
-                The campaign mode is focused on PvE through a diverse variety of objectives that the player can complete during missions, 
-                alone or with up to three player teammates. 
-              </p>
-              <p class="project-details__desc-para">
-                This mode seems, on the surface, very simple, but it is by far the most complex one to develop, since it demands handcrafted, refined levels made specifically for players to 
-                accomplish certain objectives with certain scenarios in mind, while still being able to explore. Every single mission objective has to be programmed and personalized specifically for it, in order for 
-                each mission to stand out. The player can explore the levels in order to receive rewards, they can avoid certain optional side objectives to be quicker and they can sometimes
-                 accomplish specific objectives in different ways. 
-              </p>
-              <p class="project-details__desc-para">
-                The reward obtained by the player at the end of a level is completely determined by the score they obtain. Their score is determined by the amount of enemies they killed, the time they took to beat the mission,
-                 as well as the amounts of times they died. These factors determine the score, which will dictate the <strong>percentage</strong> of a total of of experience points and gold.
-                 In general, if the percentage of the rewards is above 50%, it guarantees the player at the very least one item reward
-                 , even if the mission failed. This system applies to the all the gamemodes. 
+                Outlander has three distinct classes for the player to choose from, each one has its own stats and abilities, so advantages and disadvantages.
+                The heavy class has no mobility abilities and moves slightly slower than other classes, but it has high damage potential and large area of effect.
+                The light class cannot directly deal large amounts of damage, but its high mobility with a grappling hook and stunning dagger can still give it an edge.
+                Finally, the monk class can attack while moving at high speeds, and can also push enemies away to avoid being damaged by them. The monk can also stun nearby enemies for damage and respite.
               </p>
 
-              <h2>Survival</h2>
+              <h1 class="project-details__sub">Enemies</h1>
+
               <p class="project-details__desc-para">
-                In the survival mode, up to 10 players must protect their base from waves of diverse enemies while also managing their funds in 
-                order to augment their own stats as the gmae goes on. This mode is the most simple and direct in Age of Conquest, but it still has its own unique mecanics which make it stand out.
+                Every single enemy in Outlander is managed by the same handful of scripts, and all enemy attacks use a single script component, making it very easy to add new enemies.
+                Moreoever, it is very easy to customize attacks to be unique, giving enemies special behaviours, like blocking attacks when the player
+                is standing in front, pushing the player with a charge attack or even creating special types of projectiles to fire at the player. Each attack contains certain parameters :
+                 attack velocity, attack Time, attack Speed, movement speed debuff, attack cooldown, ranged projectiles, max enemies attacking player at once, minimum attack range,
+                maximum attack range, max enemy bypass distance, attack hitbox, attack particles, attack sound and wind up sound, etc.
+                Most melee enemies cannot all attack the player at once, as that would be unfair, so most enemies have to wait for their turn, or for other, specific conditions, like bypass distance, in order to begin attacking the player.
               </p>
               <p class="project-details__desc-para">
-                The heart of this mode is determined by the enemy spawning system. Before each start of a new wave, the game determines the type of difficulty that fits the wave,
-                 and, among the already-crafted waves of each type, it selects one randomly, then it spawns enemies in the map. However, this is not automatic. The system determines first if there 
-                 are enoiugh players in the server to spawn every single enemy in the wave. Then, it starts a countdown for the enemies that don't spawn immediately at the start of the wave, since it wouldn't feel natural if all the enemies appeared at the same time. 
-                  If the enemies that appear at the start are eleminated before the other enemies' countdowns end, the enemies with the smallest countdowns will all spawn at the same time, and reduce the other enemies' countdowns. 
-                  This way, players don't have to wait for more to spawn. This system also, partly, applies to the campaign.
-              </p>
-              <p class="project-details__desc-para">
-                As well as the difficulty multiplier added at the end of each wave, the system also gives out an amount of funds to the players. This amount is determined by the difficulty of the wave and the time it took 
-                for players to defeat it. The wave funds are also reduced each time a player dies in an active wave. They are then distributed to the players, and they can then be used in a survival mode exclusive menu 
-                that gives the ability to spend funds to augment stats, like damage multipliers, speed, attack speed, health, defense, etc. Each stat costs a certain amount to augment. Funds can also be utilized to level up your base's 
-                defenses, like the walls that defend your General. However, enemies can still easily break those walls if players aren't there to defend them. 
+                Any enemy can be given an "Elite" modifier, aside from changing the enemy's looks and sounds, it also changes their stats in specific ways.
+                Steel Elites (metal colored) deal more damage and have way more health, while also gaining knockback resistance, while becoming much slower in both movement and attack speed.
+                Fire Elites (red) also gain more health and damage, as well as inflicting the "OnFire" debuff to players, unless that player is granted immunity to that debuff.
+                There are also shadow (quick, translucent elites), poison (poisonous, green elites) and frost (slowing, blue elites).
               </p>
 
-              <h2>Team Battle</h2>
+              <h1 class="project-details__sub">Items</h1>
+
               <p class="project-details__desc-para">
-                Finally the team battle mode is the mode that allows players to both battle enemies and other players. It is, by far, the most complex gamemode in Age of Conquest. 
-                As well as the PvP aspect, players have to defend their General (boss enemy/ally) or defeat the enemy team's General. 
+                Each item in Outlander is unique and gives substantial stat or ability upgrades, making the player noticeably stronger on pickup. This is to make each and every item feel powerful and important.
+                Items range from giving simple statistical increases, like more attack speed, damage, health, regeneration, to new abilities like double jumping,
+                cloning your character, creating a doppleganger that enemies will aggro, inflicting new status effects, etc. Certain items can change your playstyle,
               </p>
+
+              <h1 class="project-details__sub">Combat</h1>
+
               <p class="project-details__desc-para">
-                At the start of a match, the players must vote for a team leader, which will then be capable of hiring workers (type of AI), who will boost the team's funds, 
-                and those funds will be used to summon reinforcements, or an ally boss. Players who are not team leader still have access to the funds system, with those funds, they can repair and upgrade structures, 
-                certain structures help defend your base or give bonuses to your team, others can host archers that fend off enemies, and the most important structures, the barracks, each spawn a wave of enemies periodically, which can be 
-                augmented by upgrading it. Players can also use their own funds to purchase outpost, which can also spawn extra allies. 
-              </p>
-              
-              <p class="project-details__desc-para">
-                Players accumulate funds by eliminating enemy AIs or enemy players, but they can't be too rash, because they lose most of their funds upon death. Rushing all alone towards the enemy base 
-                is heavily discouraged because of this, especially at the start of a match, where enemy defenses are at their strongest.
-                 To balance fights between players, the player's gear level is adjusted according to their adversary. In this way, low level players always stand a chance, even when facing more experienced players. 
+                Each class mainly utilizes melee attacks to deal the majority of their damage. Some, like the Heavy Class, also possess AoE attacks and are capable of inflicting status effects with specific abilities.
+                For example, the Light Class can throw a <i>stunning</i> dagger, which not only deals damage, but also inflicts "Stunned" to enemies. Stunned enemies take much more damage and cannot fight back for a small period of time.
+                This makes the dagger throw ability very powerful, however it is tied to a cooldown, that can only be reduced by specific items, therefore balancing the ability while retaining its usefulness.
               </p>
 
               <p class="project-details__desc-para">
-                The maps of this mode and balanced around a minimum level of entry, as well as a "maximum" level (a player's stats are capped at the maximum if they exceed it).
-                Certain aspects of the game and its enemy types are only accessible in the game's high level maps, so that players are not too overwhelemed at the start of the game. 
+                In melee combat, melee attacks are quick, and can easily  used to maneuver around multiple enemies. Combat is quick, and specifically made to handle group fights in melee.
+                Players can cancel any attack by dodging/dashing out of it, making them temporarily invincible. However, without specific mobility item upgrades, players can only dash once
+                every one and a half second, leaving them vulnerable for some time after a dash. Players are given leeway to make mistakes, but they are still punished if they are too careless.
               </p>
 
-              <h1 class="project-details__sub">Combat and Gameplay</h1>
               <p class="project-details__desc-para">
-                In terms of combat against enemies, the player can have up to five weapons equipped at all times. most weapons are unique, 
-                and they correspond to one of the three main classes that determine the player's style of play. The melee class wields close range weapons, utilizing <i>hitboxes</i>, made using <i>raycasts</i>.
-                This system also applies to melee enemies. Each weapon category has its own attacks and animations, as well as attacking at different speeds. Each weapon has a normal attack and a special attack, which 
-                consumes stamina. 
-                <br><br>
-                To encourage an aggressive combat style, but punishing recklessness, players become vulnerable when they begin an attack, since they cannot perform most other actions, 
-                their stat changes (like a State-Machine). However, the time to recover once the attack is finished is very short, often leaving players time to dodge or parry incoming attacks if they are well-timed.
-                <br><br>
-                To invalidate enemy attacks, the player has three main options: dodge (roll), parry, or block. The roll gives the player invincibility frames and allows repositioning,
-                This is particularly effective when fighting large numbers of enemies. However, rolling costs a lot of stamina and timing your dodge can be tricky. To prevent players from
-                 spamming dodges, the stamina consumed by rolls increases with each successive dodge. 
-                 
-                 Players also have the option to block or parry using the same button/key. If the timing of the parry is right, the player can nullify all enemy damage and inflict posture damage, with very few drawbacks.
-                 disadvantages. If the player's timing is poor, however, the parry becomes a block, which is far less effective. Blocking causes the player to lose energy, as well as raising his or her own 
-                 posture bar. What's more, some attacks cannot be blocked; these are indicated by red markers. To prevent the player from overusing parries, the time given to the player to correctly 
-                 time the parry becomes smaller with each successive parry.
-                  <br><br>
-                  What is player/enemy posture? It's the invisible bar that determines when a character becomes vulnerable, taking several times more damage. 
-                  To break an enemy's posture, you need to parry and/or attack them while they're blocking. This system is very similar to the one found <i>Sekiro: Shadows Die Twice</i>.                  
+                Similarly to <i>Bloodborne</i>, Outlander uses a temporary health regain mechanic called "Rally". This mechanic allows the player to regain some of their lost health after taking
+                substantial damage. This not only allows players to stay in the fight longer, but it encourages a much more active and aggressive style of play, making for exciting battles.
               </p>
 
-              <h1 class="project-details__sub">Artifical Intelligence</h1>
+
               <p class="project-details__desc-para">
-                Age of Conquest's Artificial Intelligence is as complex as it is modular. To ensure that enemies can be used in all three distinct game modes, the AI relies 
-                on three types of movement: defensive, offensive and wandering. 
-                <ul>
-                  <li class="project-details__desc-li">
-                    Defensive AIs remain stationary until a target enters their attack range; if an enemy target lures them too far out of their range, they will attempt to return to their initial defensive position.                  
-                  </li>
-                  <li class="project-details__desc-li">
-                      Offensive AIs have a given approximate path that directs them towards a specific goal, using "Pathfinding".
-                  </li>
-                  <li class="project-details__desc-li">
-                    Wandering AIs are like defensive AIs, except that they wander a certain distance from their starting point.                  </li>
-                </ul>
+                Outlander also separates itself from most roguelikes by being a fast-paced, melee oriented 3D roguelike with procedural generation.
+                Despite having similar design to a game like <i>Risk of Rain 2</i>, it also attempts to fix some of that game's core issues, like being forced to wait for enemies to spawn at the start of stages,
+                or having to slowly charge teleporters to reach the next level, even after the boss is dead. Those issues are solved with the "Pillar Spawner" system Outlander uses,
+                which allows players to spawn elite enemy types from pillars and, as soon as they are defeated, get rewarded with items. The same applies with the boss, who grants access to the shop and then the next level as soon as they are defeated.
               </p>
 
-                <br><br>
-                <p class="project-details__desc-para">
-                  Each AI also has certain optional parameters that can modify its behavior:
-                </p>
-
-                <ul>
-                  <li class="project-details__desc-li">
-                    An AI's <strong>individual</strong> stats can be adjusted in specific cases for certain missions or levels (eg: 
-                    damage multiplier, speed, running speed, attack speed, attack range, speed of a specific attack, recovery time, etc.) can all be adjusted for a specific enemy spawn.
-                  </li>
-                  <li class="project-details__desc-li">
-                    Inflict status effects, such as fire or ice, on an AI's attacks.
-                  </li>
-                  <li class="project-details__desc-li">
-                    An Ai can be enraged/aggressive, which makes it attack faster. 
-                  </li>
-                  <li class="project-details__desc-li">
-                    An AI can have a limited field of view.
-                  </li>
-                  <li class="project-details__desc-li">
-                    Other AIs can also follow players if they have the "Follower" option; this system is used in the tutorial. It can be used to give the player AI companions. 
-                  </li>
-                  <li class="project-details__desc-li">
-                    Have custom names.
-                  </li>
-                  <li class="project-details__desc-li">
-                    Have custom height/size.
-                  </li>
-                  <li class="project-details__desc-li">
-                    Be more resilient or immune against specific status effects, like fire. 
-                  </li>
-                  <li class="project-details__desc-li">
-                    Run away from targets instead of attacking them. 
-                  </li>
-                </ul> 
-
-                <br><br>
-                <p class="project-details__desc-para">
-                  To keep battles fair, players can normally not be attacked by more than one AI at the same time. In general, the player can only be attacked by one melee enemy, and one ranged enemy.
-                  However, this constraint can be bypassed, if an AI is granted the right to do so, given that the player is close enough. It can also be bypassed if the player is in the enemy base, 
-                  or he may be targeted by a large number of AIs. Fortunately, it's much harder for AIs to chase players when they're already being attacked by other AIs, so they lose 
-                  much of their rotational tracking strength and velocity, making dodging/rolling ideal for crowd combat.
-                </p>
-               
-
-                 <br><br>
-                 <p class="project-details__desc-para">
-                  Finally, in terms of combat itself, each type of enemy has its own animations and attacks, with their own attack and recovery times. Age of Conquest's AIs are "state-machines", so they react to an enemy's  state changes by changing their own state, depending on what they're up against. 
-                  Each time a player fights an AI, the AI will develop a strategy, depending on the player's state and distance. 
-                  This strategy affects where the AI will position itself and what attack it will decide to use. It can retreat if the player attacks it, try to circle around the player if he's already being attacked by other enemies, or rush in if the player is too far away or escaping. 
-                  Then, she can decide which of her attacks she should use, if her opponent is at the right distance. 
-                  Enemies who use melee combat can generally block their opponents' blows, at the risk of becoming vulnerable if their posture breaks. Others can dodge attacks, but receive no invincibility franes to avoid frustrating players. 
-                  All this is determined by a handful of functions in a single script, when provided with the parameters of an AI in combat. The system reuses as little code as possible.
-                 </p>
             </div>
 
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Tasks</h3>
               <div class="skills">
-                <div class="skills__skill">Programming (solo)</div>
-                <div class="skills__skill">Animating (solo)</div>
-                <div class="skills__skill">Rigging, Welding (coop)</div>
-                <div class="skills__skill">Game Design (solo)</div>
-                <div class="skills__skill">Level Design (coop)</div>
+                <div class="skills__skill">Programming (coop)</div>
+                <div class="skills__skill">Game Design (coop)</div>
+                <div class="skills__skill">Shaders & Particle Effects (solo)</div>
               </div>
             </div>
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Tools Utilized</h3>
               <div class="skills">
-                <div class="skills__skill">Lua</div>
-                <div class="skills__skill">Roblox Studio</div>
-                <div class="skills__skill">Blender</div>
+                <div class="skills__skill">Unity</div>
+                <div class="skills__skill">C#</div>
+                <div class="skills__skill">HLSL</div>
+                <div class="skills__skill">Word</div>
                 <div class="skills__skill">Trello</div>
               </div>
             </div>
