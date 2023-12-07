@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Outlander Overview</title>
+    <title>Survol d'Étranger</title>
     <meta name="description" content="Étranger Aperçu" />
 
     <link rel="stylesheet" href="css/style.css" />
@@ -18,12 +18,6 @@
     />
   </head>
   <body>
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
-      }
-      </script>
-      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
       <header class="header">
@@ -101,7 +95,7 @@
       </header>
     <section class="project-cs-hero">
       <div class="project-cs-hero__content">
-        <h1 class="heading-primary">Étranger (Outlander)</h1>
+        <h1 class="heading-primary">Étranger</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
             The development of Étranger (translated to Outlander in English) took place during College Lionel-Groulx's Fall 2023 semester and finished in late november and lasted only four months.
@@ -126,17 +120,17 @@
             <div class="project-details__desc">
               <h3 class="project-details__content-title">Overview</h3>
               <p class="project-details__desc-para">
-                Outlander is a third-person action rogue-like, akin to <i>Risk of Rain 2</i>, the goal is to reach the final level or survive indefinitely while traveling across
-                environments to gather item upgrades and fight enemies in the fastest way possible, as the difficulty and spawn rates of enemies scales with time. Killing enemies gives your player experience points to level up and gold to spend at the item shop that can be reached
-                from defeating an environment's boss. Players are also rewarded with item upgrades upon defeating elite enemies summoned by spawners randomly scattered on each map.
-                During the four months given for Outlander's development, myself and the team were able to conceptualize, plan, organize and produce the entirety of the project,
-                which includes four distinct enemy factions, three unique classes, dozens of enemy types and over twenty item upgrades, as well as procedurally generated 3D maps.
+                Étranger est un roguelike en troisième personne, semblable à <i>Risk of Rain 2</i>, le but est de survivre le plus longtemps que possible tout en parcourant divers
+                environnements pour collecter des améliorations et éliminer les ennemis dans chaque niveau le plus rapidement possible, car la difficulté et les taux d'apparition des ennemis évoluent avec le temps. Les ennemis donnent des points d'experience pour monter de niveau et de l'or à dépenser dans la boutique d'amélioration atteinte à la fin de chaque niveau.
+                de vaincre le patron d'un environnement. Les joueurs sont également récompensés par des améliorations d'objets après avoir vaincu des ennemis d'élite invoqués par des géniteurs dispersés au hasard sur chaque carte.
+                Durant les mois consacrés au développement d'Étranger, moi-même et l'équipe avons pu conceptualiser, planifier, organiser et produire l'intégralité du projet,
+                comprenant trois factions d'ennemies distincts, trois classes uniques, des dizaines de types d'ennemis, plus de vingt améliorations d'objets différentes, ainsi que des niveaux ayant leur propre esthétique pour chaque faction.
               </p>
               
             </div>
 
             <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Trailer</h3>
+              <h3 class="project-details__content-title">Demo</h3>
 
               <div id="ytplayer"></div>
 
@@ -151,7 +145,7 @@
                   player = new YT.Player('ytplayer', {
                     height: '360',
                     width: '100%', //https://youtu.be/TCx65yQFZxc
-                    videoId: 'U_XRMOR7hTw'
+                    videoId: 'e61sEFVcTqM'
                   });
                   }
               </script>
@@ -173,13 +167,6 @@
               class="project-details__showcase-img"
               />
 
-
-              <img
-              src="/assets/png/Combat.png"
-              alt="Project Image"
-              class="project-details__showcase-img"
-              />
-
               <img
                       src="/assets/png/undead.png"
                       alt="Project Image"
@@ -190,6 +177,13 @@
                       src="/assets/png/orc.png"
                       alt="Project Image"
                       class="project-details__showcase-img"
+              />
+
+
+              <img
+              src="/assets/png/Combat.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
               />
 
               <img
@@ -213,73 +207,73 @@
             </div>
 
             <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Design and Concept</h3>
+              <h3 class="project-details__content-title">Design et concept</h3>
 
               <h1 class="project-details__sub">Classes</h1>
 
               <p class="project-details__desc-para">
-                Outlander has three distinct classes for the player to choose from, each one has its own stats and abilities, so advantages and disadvantages.
-                The heavy class has no mobility abilities and moves slightly slower than other classes, but it has high damage potential and large area of effect.
-                The light class cannot directly deal large amounts of damage, but its high mobility with a grappling hook and stunning dagger can still give it an edge.
-                Finally, the monk class can attack while moving at high speeds, and can also push enemies away to avoid being damaged by them. The monk can also stun nearby enemies for damage and respite.
+                Étranger offre trois classes distinctes au joueur propose au joueur trois classes distinctes, chacune ayant ses propres forces et faiblesses.
+                La classe lourde n'a aucune capacité de mobilité et se déplace légèrement plus lentement que les autres classes, mais elle a un potentiel de dégâts élevé et beaucoup de portée d'attaque.
+                La classe légère ne peut pas infliger directement beaucoup de dégâts, mais sa grande mobilité avec son grappin et un poignard étourdissant lui donnent un avantage.
+                Enfin, la classe moine peut attaquer tout en se déplaçant à grande vitesse, et peut également repousser les ennemis pour éviter d'être endommagés par eux. Le moine peut également étourdir les ennemis proches pour leur infliger plus de dégâts.
               </p>
 
               <h1 class="project-details__sub">Enemies</h1>
 
               <p class="project-details__desc-para">
-                Every single enemy in Outlander is managed by the same handful of scripts, and all enemy attacks use a single script component, making it very easy to add new enemies.
-                Moreoever, it is very easy to customize attacks to be unique, giving enemies special behaviours, like blocking attacks when the player
-                is standing in front, pushing the player with a charge attack or even creating special types of projectiles to fire at the player. Each attack contains certain parameters :
-                 attack velocity, attack Time, attack Speed, movement speed debuff, attack cooldown, ranged projectiles, max enemies attacking player at once, minimum attack range,
-                maximum attack range, max enemy bypass distance, attack hitbox, attack particles, attack sound and wind up sound, etc.
-                Most melee enemies cannot all attack the player at once, as that would be unfair, so most enemies have to wait for their turn, or for other, specific conditions, like bypass distance, in order to begin attacking the player.
+                Chaque type d'ennemi d'Étranger est géré par la même poignée de scripts, et toutes les attaques des ennemies sont dictée par un seul et unique composant script ; ce qui rend l'ajout de nouveau ennemis très facile.
+                De plus, il est très facile de personnaliser les attaques pour qu'elles soient plus uniques, donnant aux ennemis des comportements spéciaux, comme bloquer les attaques lorsque le joueur
+                se tient devant, pousser le joueur avec une attaque chargée ou même créer des projectiles lors d'une animation d'attaque. Chaque attaque contient certains paramètres :
+                velocité d'attaque, temps d'attaque, vitesse d'attaque, vitesse de déplacement durant l'attaque, temps de recharge d'attaque, projectiles à distance, nombre maximum d'ennemis attaquant le joueur à la fois, portée d'attaque minimale,
+                portée d'attaque minimale et maximale, distance de contournement maximale de l'ennemi, <i>hitbox</i> d'attaque, particules d'attaque, effets sonores d'attaque, etc.
+                La plupart des ennemis en mêlée ne peuvent pas tous attaquer le joueur en même temps, car cela serait injuste au joueur, donc la plupart des ennemis doivent attendre leur tour.
               </p>
               <p class="project-details__desc-para">
-                Any enemy can be given an "Elite" modifier, aside from changing the enemy's looks and sounds, it also changes their stats in specific ways.
-                Steel Elites (metal colored) deal more damage and have way more health, while also gaining knockback resistance, while becoming much slower in both movement and attack speed.
-                Fire Elites (red) also gain more health and damage, as well as inflicting the "OnFire" debuff to players, unless that player is granted immunity to that debuff.
-                There are also shadow (quick, translucent elites), poison (poisonous, green elites) and frost (slowing, blue elites).
+                Tout ennemi peut recevoir un modificateur « Élite », ce qui, en plus de modifier l'apparence et les sons de l'ennemi, modifie également ses statistiques de manière spécifique.
+                Les Élites d'Acier (de couleur métal) infligent plus de dégâts et ont beaucoup plus de santé, tout en gagnant également en résistance au recul et en devenant beaucoup plus lentes en termes de vitesse de déplacement.
+                Les Élites de Feu (rouges) gagnent également plus de santé et de dégâts, et infligent l'effet de statut « OnFire » aux joueurs (met les joueurs en feu), à moins que ce joueur ne bénéficie de l'immunité contre le feu.
+                Il existe également les Élites d'Ombre (élites rapides et translucides), de Poison (élites venimeuses et vertes) et le Gel (élites bleues qui ralentissent le joueur).
               </p>
 
-              <h1 class="project-details__sub">Items</h1>
+              <h1 class="project-details__sub">Améliorations</h1>
 
               <p class="project-details__desc-para">
-                Each item in Outlander is unique and gives substantial stat or ability upgrades, making the player noticeably stronger on pickup. This is to make each and every item feel powerful and important.
-                Items range from giving simple statistical increases, like more attack speed, damage, health, regeneration, to new abilities like double jumping,
-                cloning your character, creating a doppleganger that enemies will aggro, inflicting new status effects, etc. Certain items can even change your playstyle by making certain abilities much more powerful.
+                Chaque amélioration est unique et offre des bonus substantiels de statistiques ou de capacités, rendant le joueur visiblement. Il est important de donner fournir au joueur un sentiment de puissance lors de chaque amélioration.
+                Les améliorations vont de simples augmentations statistiques, comme plus de vitesse d'attaque, de dégâts, de santé, de régénération, à de nouvelles capacités comme le double saut,
+                le clone de votre personnage, de bouc-émissaire qui attire les ennemis, le gain de nouveaux effets de statut, etc. Certains objets peuvent même changer la façon dont le joueur approche tous les combats.
               </p>
 
-              <h1 class="project-details__sub">Combat</h1>
+              <h1 class="project-details__sub">Combat et Gameplay</h1>
 
               <p class="project-details__desc-para">
-                Each class mainly utilizes melee attacks to deal the majority of their damage. Some, like the Heavy Class, also possess AoE attacks and are capable of inflicting status effects with specific abilities.
-                For example, the Light Class can throw a <i>stunning</i> dagger, which not only deals damage, but also inflicts "Stunned" to enemies. Stunned enemies take much more damage and cannot fight back for a small period of time.
-                This makes the dagger throw ability very powerful, however it is tied to a cooldown, that can only be reduced by specific items, therefore balancing the ability while retaining its usefulness.
-              </p>
-
-              <p class="project-details__desc-para">
-                In melee combat, melee attacks are quick, and can easily  used to maneuver around multiple enemies. Combat is quick, and specifically made to handle group fights in melee.
-                Players can cancel any attack by dodging/dashing out of it, making them temporarily invincible. However, without specific mobility item upgrades, players can only dash once
-                every one and a half second, leaving them vulnerable for some time after a dash. Players are given leeway to make mistakes, but they are still punished if they are too careless.
+                Chaque classe utilise principalement des attaques de mêlée pour infliger la majorité de ses dégâts. Certains, comme la classe Heavy, possèdent également des attaques AoE et sont capables d'infliger des effets de statut avec des capacités spécifiques.
+                Par exemple, la classe Lumière peut lancer une dague <i>étourdissante</i>, qui non seulement inflige des dégâts, mais inflige également « Étourdi » aux ennemis. Les ennemis étourdis subissent beaucoup plus de dégâts et ne peuvent pas riposter pendant une courte période.
+                Cela rend la capacité de lancer de dague très puissante, mais elle est liée à un temps de recharge, qui ne peut être réduit que par des objets spécifiques, équilibrant ainsi la capacité tout en conservant son utilité.
               </p>
 
               <p class="project-details__desc-para">
-                Similarly to <i>Bloodborne</i>, Outlander uses a temporary health regain mechanic called "Rally". This mechanic allows the player to regain some of their lost health after taking
-                substantial damage. This not only allows players to stay in the fight longer, but it encourages a much more active and aggressive style of play, making for exciting battles.
+                En combat au corps à corps, les attaques sont rapides et peuvent facilement être utilisées pour contourner plusieurs ennemis. Le système de combat est spécialement conçu pour que le joueur soit capable de gérer des groupes de nombreux ennemis en même temps.
+                Les joueurs peuvent annuler n'importe quelle attaque en utilisant leur esquive, ce qui les rend temporairement invincible. Cependant, sans améliorations spécifiques, comme des objets de mobilité, les joueurs ne peuvent qu'esquiver une seule fois
+                toutes les secondes et demie, laissant les joueurs vulnérables pendant un certain temps. Les joueurs ont une marge de manœuvre pour commettre des erreurs, mais ils sont tout de même punis s'ils sont trop imprudents.
+              </p>
+
+              <p class="project-details__desc-para">
+               Similaire à <i>Bloodborne</i>, Étranger utilise un mécanisme de récupération de points de vie temporaire appelé « Rally ». Cette mécanique permet au joueur de regagner une partie de sa santé perdue après avoir pris
+                des dégâts importants. Cela permet non seulement aux joueurs de rester plus longtemps dans le combat, mais encourage également un style de jeu beaucoup plus actif et agressif, ce qui rend les combats plus intéressants.
               </p>
 
 
               <p class="project-details__desc-para">
-                Outlander also separates itself from most roguelikes by being a fast-paced, melee oriented 3D roguelike with procedural generation.
-                Despite having similar design to a game like <i>Risk of Rain 2</i>, it also attempts to fix some of that game's core issues, like being forced to wait for enemies to spawn at the start of stages,
-                or having to slowly charge teleporters to reach the next level, even after the boss is dead. Those issues are solved with the "Pillar Spawner" system Outlander uses,
-                which allows players to spawn elite enemy types from pillars and, as soon as they are defeated, get rewarded with items. The same applies with the boss, who grants access to the shop and then the next level as soon as they are defeated.
+                Enfin, Étranger se distingue également de la plupart des roguelikes en étant un jeu 3D rapide et orienté mêlée avec génération procédurale.
+                Bien qu'il ait une conception similaire à celle d'un jeu comme <i>Risk of Rain 2</i>, il tente également de résoudre certains des problèmes fondamentaux de ce jeu, comme être obligé d'attendre que les ennemis apparaissent au début des niveaux,
+                ou devoir charger lentement les téléporteurs pour atteindre le niveau suivant, même après la mort du boss. Ces problèmes sont résolus grâce au système pilier d'apparitions (spawner) utilisé par Étranger,
+                qui permet aux joueurs d'invoquer des ennemis élites à partir de piliers et, dès qu'ils sont vaincus, d'être récompensés par des objets. Il en va de même avec le boss, qui donne accès à la boutique puis au niveau suivant dès qu'il est vaincu.
               </p>
 
             </div>
 
             <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Tasks</h3>
+              <h3 class="project-details__content-title">Tâches réalizées</h3>
               <div class="skills">
                 <div class="skills__skill">Programming (coop)</div>
                 <div class="skills__skill">Game Design (coop)</div>
@@ -287,7 +281,7 @@
               </div>
             </div>
             <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Tools Utilized</h3>
+              <h3 class="project-details__content-title">Outils utilisés</h3>
               <div class="skills">
                 <div class="skills__skill">Unity</div>
                 <div class="skills__skill">C#</div>
@@ -297,19 +291,19 @@
               </div>
             </div>
             <div class="project-details__links">
-              <h3 class="project-details__content-title">Project Link</h3>
+              <h3 class="project-details__content-title">Lien au projet</h3>
 
               <a
                 href="./homeEn.html"
                 class="btn btn--med btn--theme project-details__links-btn"
                 target="_blank"
-                >Game Link [Unavailable]</a
+                >Lien au jeu [Indisponible]</a
               >
               <a
                 href="https://site-outlander.carrd.co/?fbclid=IwAR0J8DfI8TBlsHPua2cAD6bO9uvyITnSok4nzeA6vBPHemTlDUA3S0nh7hg"
                 class="btn btn--med btn--theme-inv project-details__links-btn"
                 target="_blank"
-                >Website Link</a
+                >Lien au site</a
               >
             </div>
           </div>
