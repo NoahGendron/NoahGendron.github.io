@@ -104,7 +104,7 @@
         <h1 class="heading-primary">Age of Conquest</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
-            The development of Age of Conquest is finished, but the game is not yet accessible to the public. 
+           Age of Conquest released in December 2024 and can now be played <span href="https://www.roblox.com/games/14091994734/ALPHA-Age-Of-Conquest">Here</span>.
           </p>
         </div>
         <!--<div class="project-cs-hero__cta">
@@ -127,15 +127,35 @@
               <h3 class="project-details__content-title">Overview</h3>
               <p class="project-details__desc-para">
                 Age of Conquest is akin to an MMORP and an action adventure game, with three distinct game modes and 
-                a diverse array of content, like dozens of enemies, weapons and armor sets. Each gamemode can be played alone or in coop.
+                a diverse array of content, like dozens of enemies, weapons and armor sets. Each gamemode can be played alone or in coop. The game peaked at around <strong>140 concurrent players</strong> 
+                and has gained over <strong>138,000 visits (plays)</strong>
               </p>
               
             </div>
 
             <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Demo</h3>
+              <h3 class="project-details__content-title">Game Trailer</h3>
 
               <div id="ytplayer"></div>
+
+              <script>
+                  var tag = document.createElement('script');
+                  tag.src = "https://www.youtube.com/player_api";
+                  var firstScriptTag = document.getElementsByTagName('script')[0];
+                  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                  var player;
+                  function onYouTubePlayerAPIReady() {
+                  player = new YT.Player('ytplayer', {
+                    height: '360',
+                    width: '100%', //https://youtu.be/TCx65yQFZxc
+                    videoId: 'SFrUGAc54oI'
+                  });
+                  }
+              </script>
+
+
+              <h3 class="project-details__content-title">Game Demo</h3>
 
               <script>
                   var tag = document.createElement('script');
