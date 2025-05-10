@@ -12,6 +12,41 @@ $breakpoint arguement choices:
 
 Inside media queries 1em is always 16px i.e 1em = 16px at every screen size only inside media queries
 */
+
+
+
+
+
+
+
+
+.about__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.about__content-main,
+.about__content-skills,
+.about__content-image {
+  flex: 1 1 300px;
+}
+
+.about__content-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
 *,
 *::after,
 *::before {
