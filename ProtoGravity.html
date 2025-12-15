@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Prototype de gravité</title>
+    <meta name="description" content="Étranger Aperçu" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/png/StrangerArtwork.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+
+      <header class="header">
+        <div class="header__content">
+          <div class="header__logo-container">
+             <!-- <div class="header__logo-img-cont">
+              <img
+                src="./assets/jpeg/AlainPatoche.jpg"
+                alt="Logo"
+                class="header__logo-img"
+              /> 
+            </div>--> 
+            <span class="header__logo-sub">Noah Gendron</span>
+          </div>
+          <div class="header__main">
+            <ul class="header__links">
+              <li class="header__link-wrapper">
+                <a href="./homeEn.html" class="header__link"> Accueil </a>
+              </li>
+              <li class="header__link-wrapper">
+                <a href="./homeEn.html#about" class="header__link">À propos </a>
+              </li>
+              <li class="header__link-wrapper">
+                <a href="./homeEn.html#projects" class="header__link">
+                  Projets
+                </a>
+              </li>
+              <li class="header__link-wrapper">
+                <a href="./homeEn.html#cv" class="header__link"> CV </a>
+              </li>
+              <li class="header__link-wrapper">
+                <a href="./homeEn.html#contact" class="header__link"> Contact </a>
+              </li>
+              
+            </ul>
+            <div class="header__main-ham-menu-cont">
+              <img
+                src="/assets/svg/ham-menu.svg"
+                alt="hamburger menu"
+                class="header__main-ham-menu"
+              />
+              <img
+                src="/assets/svg/ham-menu-close.svg"
+                alt="hamburger menu close"
+                class="header__main-ham-menu-close d-none"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="header__sm-menu">
+          <div class="header__sm-menu-content">
+            <ul class="header__sm-menu-links">
+              <li class="header__sm-menu-link">
+                <a href="./homeEn.html"> Home </a>
+              </li>
+  
+              <li class="header__sm-menu-link">
+                <a href="./homeEn.html#about"> About </a>
+              </li>
+  
+              <li class="header__sm-menu-link">
+                <a href="./homeEn.html#projects"> Projects </a>
+              </li>
+  
+              <li class="header__sm-menu-link">
+                <a href="./homeEn.html#cv"> CV </a>
+              </li>
+  
+              <li class="header__sm-menu-link">
+                <a href="./homeEn.html#contact"> Contact </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Étranger</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            Le développement d'Étranger a eu lieu durant la session d'automne 2023 du programme d'informatique au Collège Lionel-Groulx. Le développement du projet n'a prit que quatre mois. 
+          </p>
+        </div>
+        <!--<div class="project-cs-hero__cta">
+          <a href="https://www.roblox.com/groups/4909412/Conquest-Studio#!/about" class="btn btn--bg" target="_blank">Lien au Groupe</a>
+        </div>-->
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont">
+            <img
+              src="/assets/png/StrangerArtwork.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+            />
+          </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Overview</h3>
+              <p class="project-details__desc-para">
+                Étranger est un roguelike en troisième personne, semblable à <i>Risk of Rain 2</i>, le but est de survivre le plus longtemps que possible tout en parcourant divers
+                environnements pour collecter des améliorations et éliminer les ennemis dans chaque niveau le plus rapidement possible, car la difficulté et les taux d'apparition des ennemis évoluent avec le temps. Les ennemis donnent des points d'experience pour monter de niveau et de l'or à dépenser dans la boutique d'amélioration atteinte à la fin de chaque niveau.
+                de vaincre le patron d'un environnement. Les joueurs sont également récompensés par des améliorations d'objets après avoir vaincu des ennemis d'élite invoqués par des géniteurs dispersés au hasard sur chaque carte.
+                Durant les mois consacrés au développement d'Étranger, moi-même et l'équipe avons pu conceptualiser, planifier, organiser et produire l'intégralité du projet,
+                comprenant trois factions d'ennemies distincts, trois classes uniques, des dizaines de types d'ennemis, plus de vingt améliorations d'objets différentes, ainsi que des niveaux ayant leur propre esthétique pour chaque faction.
+              </p>
+              
+            </div>
+
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Demo</h3>
+
+              <div id="ytplayer"></div>
+
+              <script>
+                  var tag = document.createElement('script');
+                  tag.src = "https://www.youtube.com/player_api";
+                  var firstScriptTag = document.getElementsByTagName('script')[0];
+                  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                  var player;
+                  function onYouTubePlayerAPIReady() {
+                  player = new YT.Player('ytplayer', {
+                    height: '360',
+                    width: '100%', //https://youtu.be/TCx65yQFZxc
+                    videoId: 'e61sEFVcTqM'
+                  });
+                  }
+              </script>
+
+            </div>
+
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Images</h3>
+
+              <img
+              src="/assets/png/Menu.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+              />
+
+              <img
+              src="/assets/png/Paysage.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+              />
+
+              <img
+                      src="/assets/png/undead.png"
+                      alt="Project Image"
+                      class="project-details__showcase-img"
+              />
+
+              <img
+                      src="/assets/png/orc.png"
+                      alt="Project Image"
+                      class="project-details__showcase-img"
+              />
+
+
+              <img
+              src="/assets/png/Combat.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+              />
+
+              <img
+              src="/assets/png/Death.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+              />
+
+              <img
+              src="/assets/png/GifStranger.gif"
+              alt="Project Image"
+              class="project-details__showcase-img"
+              />
+
+              <img
+                  src="/assets/png/StrangerDeath.gif"
+                  alt="Project Image"
+                  class="project-details__showcase-img"
+              />
+
+            </div>
+
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Design et concept</h3>
+
+              <h1 class="project-details__sub">Classes</h1>
+
+              <p class="project-details__desc-para">
+                Étranger offre trois classes distinctes au joueur propose au joueur trois classes distinctes, chacune ayant ses propres forces et faiblesses.
+                La classe lourde n'a aucune capacité de mobilité et se déplace légèrement plus lentement que les autres classes, mais elle a un potentiel de dégâts élevé et beaucoup de portée d'attaque.
+                La classe légère ne peut pas infliger directement beaucoup de dégâts, mais sa grande mobilité avec son grappin et un poignard étourdissant lui donnent un avantage.
+                Enfin, la classe moine peut attaquer tout en se déplaçant à grande vitesse, et peut également repousser les ennemis pour éviter d'être endommagés par eux. Le moine peut également étourdir les ennemis proches pour leur infliger plus de dégâts.
+              </p>
+
+              <h1 class="project-details__sub">Enemies</h1>
+
+              <p class="project-details__desc-para">
+                Chaque type d'ennemi d'Étranger est géré par la même poignée de scripts, et toutes les attaques des ennemies sont dictée par un seul et unique composant script ; ce qui rend l'ajout de nouveau ennemis très facile.
+                De plus, il est très facile de personnaliser les attaques pour qu'elles soient plus uniques, donnant aux ennemis des comportements spéciaux, comme bloquer les attaques lorsque le joueur
+                se tient devant, pousser le joueur avec une attaque chargée ou même créer des projectiles lors d'une animation d'attaque. Chaque attaque contient certains paramètres :
+                velocité d'attaque, temps d'attaque, vitesse d'attaque, vitesse de déplacement durant l'attaque, temps de recharge d'attaque, projectiles à distance, nombre maximum d'ennemis attaquant le joueur à la fois, portée d'attaque minimale,
+                portée d'attaque minimale et maximale, distance de contournement maximale de l'ennemi, <i>hitbox</i> d'attaque, particules d'attaque, effets sonores d'attaque, etc.
+                La plupart des ennemis en mêlée ne peuvent pas tous attaquer le joueur en même temps, car cela serait injuste au joueur, donc la plupart des ennemis doivent attendre leur tour.
+              </p>
+              <p class="project-details__desc-para">
+                Tout ennemi peut recevoir un modificateur « Élite », ce qui, en plus de modifier l'apparence et les sons de l'ennemi, modifie également ses statistiques de manière spécifique.
+                Les Élites d'Acier (de couleur métal) infligent plus de dégâts et ont beaucoup plus de santé, tout en gagnant également en résistance au recul et en devenant beaucoup plus lentes en termes de vitesse de déplacement.
+                Les Élites de Feu (rouges) gagnent également plus de santé et de dégâts, et infligent l'effet de statut « OnFire » aux joueurs (met les joueurs en feu), à moins que ce joueur ne bénéficie de l'immunité contre le feu.
+                Il existe également les Élites d'Ombre (élites rapides et translucides), de Poison (élites venimeuses et vertes) et le Gel (élites bleues qui ralentissent le joueur).
+              </p>
+
+              <h1 class="project-details__sub">Améliorations</h1>
+
+              <p class="project-details__desc-para">
+                Chaque amélioration est unique et offre des bonus substantiels de statistiques ou de capacités, rendant le joueur visiblement. Il est important de donner fournir au joueur un sentiment de puissance lors de chaque amélioration.
+                Les améliorations vont de simples augmentations statistiques, comme plus de vitesse d'attaque, de dégâts, de santé, de régénération, à de nouvelles capacités comme le double saut,
+                le clone de votre personnage, de bouc-émissaire qui attire les ennemis, le gain de nouveaux effets de statut, etc. Certains objets peuvent même changer la façon dont le joueur approche tous les combats.
+              </p>
+
+              <h1 class="project-details__sub">Combat et Gameplay</h1>
+
+              <p class="project-details__desc-para">
+                Chaque classe utilise principalement des attaques de mêlée pour infliger la majorité de ses dégâts. Certains, comme la classe Heavy, possèdent également des attaques AoE et sont capables d'infliger des effets de statut avec des capacités spécifiques.
+                Par exemple, la classe Lumière peut lancer une dague <i>étourdissante</i>, qui non seulement inflige des dégâts, mais inflige également « Étourdi » aux ennemis. Les ennemis étourdis subissent beaucoup plus de dégâts et ne peuvent pas riposter pendant une courte période.
+                Cela rend la capacité de lancer de dague très puissante, mais elle est liée à un temps de recharge, qui ne peut être réduit que par des objets spécifiques, équilibrant ainsi la capacité tout en conservant son utilité.
+              </p>
+
+              <p class="project-details__desc-para">
+                En combat au corps à corps, les attaques sont rapides et peuvent facilement être utilisées pour contourner plusieurs ennemis. Le système de combat est spécialement conçu pour que le joueur soit capable de gérer des groupes de nombreux ennemis en même temps.
+                Les joueurs peuvent annuler n'importe quelle attaque en utilisant leur esquive, ce qui les rend temporairement invincible. Cependant, sans améliorations spécifiques, comme des objets de mobilité, les joueurs ne peuvent qu'esquiver une seule fois
+                toutes les secondes et demie, laissant les joueurs vulnérables pendant un certain temps. Les joueurs ont une marge de manœuvre pour commettre des erreurs, mais ils sont tout de même punis s'ils sont trop imprudents.
+              </p>
+
+              <p class="project-details__desc-para">
+               Similaire à <i>Bloodborne</i>, Étranger utilise un mécanisme de récupération de points de vie temporaire appelé « Rally ». Cette mécanique permet au joueur de regagner une partie de sa santé perdue après avoir pris
+                des dégâts importants. Cela permet non seulement aux joueurs de rester plus longtemps dans le combat, mais encourage également un style de jeu beaucoup plus actif et agressif, ce qui rend les combats plus intéressants.
+              </p>
+
+
+              <p class="project-details__desc-para">
+                Enfin, Étranger se distingue également de la plupart des roguelikes en étant un jeu 3D rapide et orienté mêlée avec génération procédurale.
+                Bien qu'il ait une conception similaire à celle d'un jeu comme <i>Risk of Rain 2</i>, il tente également de résoudre certains des problèmes fondamentaux de ce jeu, comme être obligé d'attendre que les ennemis apparaissent au début des niveaux,
+                ou devoir charger lentement les téléporteurs pour atteindre le niveau suivant, même après la mort du boss. Ces problèmes sont résolus grâce au système pilier d'apparitions (spawner) utilisé par Étranger,
+                qui permet aux joueurs d'invoquer des ennemis élites à partir de piliers et, dès qu'ils sont vaincus, d'être récompensés par des objets. Il en va de même avec le boss, qui donne accès à la boutique puis au niveau suivant dès qu'il est vaincu.
+              </p>
+
+            </div>
+
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tâches réalizées</h3>
+              <div class="skills">
+                <div class="skills__skill">Programming (coop)</div>
+                <div class="skills__skill">Game Design (coop)</div>
+                <div class="skills__skill">Shaders & Particle Effects (solo)</div>
+              </div>
+            </div>
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Outils utilisés</h3>
+              <div class="skills">
+                <div class="skills__skill">Unity</div>
+                <div class="skills__skill">C#</div>
+                <div class="skills__skill">HLSL</div>
+                <div class="skills__skill">Word</div>
+                <div class="skills__skill">Trello</div>
+              </div>
+            </div>
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">Lien au projet</h3>
+
+              <a
+                href="./homeEn.html"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+                >Lien au jeu [Indisponible]</a
+              >
+              <a
+                href="https://site-outlander.carrd.co/?fbclid=IwAR0J8DfI8TBlsHPua2cAD6bO9uvyITnSok4nzeA6vBPHemTlDUA3S0nh7hg"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >Lien au site</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span></span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <!-- <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a> -->
+              <a target="_blank" rel="noreferrer" href="https://github.com/NoahGendron">
+                <img
+                  class="main-footer__icon"
+                  src="/assets/png/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/noah-gendron-032233296/">
+                <img
+                  class="main-footer__icon"
+                  src="/assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Noah Gendron</h4>
+            <p class="main-footer__short-desc">
+             
+            </p>
+          </div>
+        </div>
+
+        <div class="main-footer__lower">
+          <!-- &copy; --> Inspiré par le portfolio de 
+          <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
+            >Ram Maheshwari</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="/index.js"></script>
+  </body>
+</html>
