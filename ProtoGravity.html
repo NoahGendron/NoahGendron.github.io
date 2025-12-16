@@ -95,10 +95,10 @@
       </header>
     <section class="project-cs-hero">
       <div class="project-cs-hero__content">
-        <h1 class="heading-primary">Étranger</h1>
+        <h1 class="heading-primary">Prototype de gravité</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
-            Le développement d'Étranger a eu lieu durant la session d'automne 2023 du programme d'informatique au Collège Lionel-Groulx. Le développement du projet n'a prit que quatre mois. 
+            Le développement de ce prototype a eu lieu durant la session d'automne 2025 du baccalauréat en création de jeu vidéo (concentration design) à l'Université du Québec en Abiti-Témiscamingue.
           </p>
         </div>
         <!--<div class="project-cs-hero__cta">
@@ -118,7 +118,7 @@
           </div>
           <div class="project-details__content-main">
             <div class="project-details__desc">
-              <h3 class="project-details__content-title">Overview</h3>
+              <h3 class="project-details__content-title">Survol</h3>
               <p class="project-details__desc-para">
                 Étranger est un roguelike en troisième personne, semblable à <i>Risk of Rain 2</i>, le but est de survivre le plus longtemps que possible tout en parcourant divers
                 environnements pour collecter des améliorations et éliminer les ennemis dans chaque niveau le plus rapidement possible, car la difficulté et les taux d'apparition des ennemis évoluent avec le temps. Les ennemis donnent des points d'experience pour monter de niveau et de l'or à dépenser dans la boutique d'amélioration atteinte à la fin de chaque niveau.
@@ -130,7 +130,7 @@
             </div>
 
             <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Demo</h3>
+              <h3 class="project-details__content-title">Démonstration</h3>
 
               <div id="ytplayer"></div>
 
@@ -144,8 +144,8 @@
                   function onYouTubePlayerAPIReady() {
                   player = new YT.Player('ytplayer', {
                     height: '360',
-                    width: '100%', //https://youtu.be/TCx65yQFZxc
-                    videoId: 'e61sEFVcTqM'
+                    width: '100%', //https://youtu.be/-4OvsGPCtPQ
+                    videoId: '-4OvsGPCtPQ'
                   });
                   }
               </script>
@@ -167,42 +167,6 @@
               class="project-details__showcase-img"
               />
 
-              <img
-                      src="/assets/png/undead.png"
-                      alt="Project Image"
-                      class="project-details__showcase-img"
-              />
-
-              <img
-                      src="/assets/png/orc.png"
-                      alt="Project Image"
-                      class="project-details__showcase-img"
-              />
-
-
-              <img
-              src="/assets/png/Combat.png"
-              alt="Project Image"
-              class="project-details__showcase-img"
-              />
-
-              <img
-              src="/assets/png/Death.png"
-              alt="Project Image"
-              class="project-details__showcase-img"
-              />
-
-              <img
-              src="/assets/png/GifStranger.gif"
-              alt="Project Image"
-              class="project-details__showcase-img"
-              />
-
-              <img
-                  src="/assets/png/StrangerDeath.gif"
-                  alt="Project Image"
-                  class="project-details__showcase-img"
-              />
 
             </div>
 
@@ -235,49 +199,15 @@
                 Il existe également les Élites d'Ombre (élites rapides et translucides), de Poison (élites venimeuses et vertes) et le Gel (élites bleues qui ralentissent le joueur).
               </p>
 
-              <h1 class="project-details__sub">Améliorations</h1>
-
-              <p class="project-details__desc-para">
-                Chaque amélioration est unique et offre des bonus substantiels de statistiques ou de capacités, rendant le joueur visiblement. Il est important de donner fournir au joueur un sentiment de puissance lors de chaque amélioration.
-                Les améliorations vont de simples augmentations statistiques, comme plus de vitesse d'attaque, de dégâts, de santé, de régénération, à de nouvelles capacités comme le double saut,
-                le clone de votre personnage, de bouc-émissaire qui attire les ennemis, le gain de nouveaux effets de statut, etc. Certains objets peuvent même changer la façon dont le joueur approche tous les combats.
-              </p>
-
-              <h1 class="project-details__sub">Combat et Gameplay</h1>
-
-              <p class="project-details__desc-para">
-                Chaque classe utilise principalement des attaques de mêlée pour infliger la majorité de ses dégâts. Certains, comme la classe Heavy, possèdent également des attaques AoE et sont capables d'infliger des effets de statut avec des capacités spécifiques.
-                Par exemple, la classe Lumière peut lancer une dague <i>étourdissante</i>, qui non seulement inflige des dégâts, mais inflige également « Étourdi » aux ennemis. Les ennemis étourdis subissent beaucoup plus de dégâts et ne peuvent pas riposter pendant une courte période.
-                Cela rend la capacité de lancer de dague très puissante, mais elle est liée à un temps de recharge, qui ne peut être réduit que par des objets spécifiques, équilibrant ainsi la capacité tout en conservant son utilité.
-              </p>
-
-              <p class="project-details__desc-para">
-                En combat au corps à corps, les attaques sont rapides et peuvent facilement être utilisées pour contourner plusieurs ennemis. Le système de combat est spécialement conçu pour que le joueur soit capable de gérer des groupes de nombreux ennemis en même temps.
-                Les joueurs peuvent annuler n'importe quelle attaque en utilisant leur esquive, ce qui les rend temporairement invincible. Cependant, sans améliorations spécifiques, comme des objets de mobilité, les joueurs ne peuvent qu'esquiver une seule fois
-                toutes les secondes et demie, laissant les joueurs vulnérables pendant un certain temps. Les joueurs ont une marge de manœuvre pour commettre des erreurs, mais ils sont tout de même punis s'ils sont trop imprudents.
-              </p>
-
-              <p class="project-details__desc-para">
-               Similaire à <i>Bloodborne</i>, Étranger utilise un mécanisme de récupération de points de vie temporaire appelé « Rally ». Cette mécanique permet au joueur de regagner une partie de sa santé perdue après avoir pris
-                des dégâts importants. Cela permet non seulement aux joueurs de rester plus longtemps dans le combat, mais encourage également un style de jeu beaucoup plus actif et agressif, ce qui rend les combats plus intéressants.
-              </p>
-
-
-              <p class="project-details__desc-para">
-                Enfin, Étranger se distingue également de la plupart des roguelikes en étant un jeu 3D rapide et orienté mêlée avec génération procédurale.
-                Bien qu'il ait une conception similaire à celle d'un jeu comme <i>Risk of Rain 2</i>, il tente également de résoudre certains des problèmes fondamentaux de ce jeu, comme être obligé d'attendre que les ennemis apparaissent au début des niveaux,
-                ou devoir charger lentement les téléporteurs pour atteindre le niveau suivant, même après la mort du boss. Ces problèmes sont résolus grâce au système pilier d'apparitions (spawner) utilisé par Étranger,
-                qui permet aux joueurs d'invoquer des ennemis élites à partir de piliers et, dès qu'ils sont vaincus, d'être récompensés par des objets. Il en va de même avec le boss, qui donne accès à la boutique puis au niveau suivant dès qu'il est vaincu.
-              </p>
+          
 
             </div>
 
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Tâches réalizées</h3>
               <div class="skills">
-                <div class="skills__skill">Programming (coop)</div>
-                <div class="skills__skill">Game Design (coop)</div>
-                <div class="skills__skill">Shaders & Particle Effects (solo)</div>
+                <div class="skills__skill">Programmation </div>
+                <div class="skills__skill">Design de jeu </div>
               </div>
             </div>
             <div class="project-details__tools-used">
@@ -285,27 +215,10 @@
               <div class="skills">
                 <div class="skills__skill">Unity</div>
                 <div class="skills__skill">C#</div>
-                <div class="skills__skill">HLSL</div>
-                <div class="skills__skill">Word</div>
-                <div class="skills__skill">Trello</div>
+                <div class="skills__skill">Miro</div>
               </div>
             </div>
-            <div class="project-details__links">
-              <h3 class="project-details__content-title">Lien au projet</h3>
 
-              <a
-                href="./homeEn.html"
-                class="btn btn--med btn--theme project-details__links-btn"
-                target="_blank"
-                >Lien au jeu [Indisponible]</a
-              >
-              <a
-                href="https://site-outlander.carrd.co/?fbclid=IwAR0J8DfI8TBlsHPua2cAD6bO9uvyITnSok4nzeA6vBPHemTlDUA3S0nh7hg"
-                class="btn btn--med btn--theme-inv project-details__links-btn"
-                target="_blank"
-                >Lien au site</a
-              >
-            </div>
           </div>
         </div>
       </div>
