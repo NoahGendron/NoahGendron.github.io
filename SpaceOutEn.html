@@ -135,6 +135,7 @@
               <h3 class="project-details__content-title">Demo</h3>
 
               <div id="ytplayer"></div>
+              <div id="ytplayer2"></div>
 
               <script>
                   var tag = document.createElement('script');
@@ -160,7 +161,7 @@
 
                   var player;
                   function onYouTubePlayerAPIReady() {
-                  player = new YT.Player('ytplayer', {
+                  player = new YT.Player('ytplayer2', {
                     height: '360',
                     width: '100%', //https://youtu.be/TCx65yQFZxc
                     videoId: '5Foxrcs7JMI'
