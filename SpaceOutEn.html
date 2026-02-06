@@ -131,9 +131,44 @@
               The project’s narrative ambitions had, obviously, to be set aside for this proof of concept, and the mechanic of transporting the flower was also abandoned for the sake of simplicity. However, in future iterations, these facets of the experience could have been implemented, in addition to mechanics for the random generation of platforms in order to add replayability, comparable to <i>roguelike</i> games.
             </div>
 
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Demo</h3>
 
-            
+              <div id="ytplayer"></div>
 
+              <script>
+                  var tag = document.createElement('script');
+                  tag.src = "https://www.youtube.com/player_api";
+                  var firstScriptTag = document.getElementsByTagName('script')[0];
+                  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                  var player;
+                  function onYouTubePlayerAPIReady() {
+                  player = new YT.Player('ytplayer', {
+                    height: '360',
+                    width: '100%', //https://youtu.be/TCx65yQFZxc
+                    videoId: 'UDb6tphVTNM'
+                  });
+                  }
+              </script>
+
+              <script>
+                  var tag = document.createElement('script');
+                  tag.src = "https://www.youtube.com/player_api";
+                  var firstScriptTag = document.getElementsByTagName('script')[0];
+                  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                  var player;
+                  function onYouTubePlayerAPIReady() {
+                  player = new YT.Player('ytplayer', {
+                    height: '360',
+                    width: '100%', //https://youtu.be/TCx65yQFZxc
+                    videoId: '5Foxrcs7JMI'
+                  });
+                  }
+              </script>
+
+            </div>
               
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Images</h3>
