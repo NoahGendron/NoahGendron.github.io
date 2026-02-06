@@ -135,6 +135,7 @@
               <h3 class="project-details__content-title">Demo</h3>
 
               <div id="ytplayer"></div>
+              <div id="ytplayer2"></div>
 
               <script>
                   var tag = document.createElement('script');
@@ -150,11 +151,22 @@
                     videoId: 'UDb6tphVTNM'
                   });
                   }
+                  
+                  var player2;
+                  function onYouTubePlayerAPIReady2() {
+                  player2 = new YT.Player('ytplayer2', {
+                    height: '360',
+                    width: '100%', //https://youtu.be/TCx65yQFZxc
+                    videoId: '5Foxrcs7JMI'
+                  });
+                  }
+                  
               </script>
 
             </div>
 
              <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Demo2</h3>
 
               <div id="ytplayer"></div>
 
@@ -169,12 +181,13 @@
                   player = new YT.Player('ytplayer', {
                     height: '360',
                     width: '100%', //https://youtu.be/TCx65yQFZxc
-                    videoId: '5Foxrcs7JMI'
+                    videoId: 'UDb6tphVTNM'
                   });
                   }
+                  
+   
+                  
               </script>
-
-
 
             </div>
               
