@@ -117,63 +117,48 @@
           </div>
           <div class="project-details__content-main">
             <div class="project-details__desc">
-              <h3 class="project-details__content-title">Overview & Inspiration</h3>
+              <h3 class="project-details__content-title">Overview</h3>
               <p class="project-details__desc-para">
-                Space Out is a proof of concept developed in Unity 6 and conceptualized using Miro. The idea of the game is simple: we are the sole survivor of a planet about to explode.
-              The player must platform higher and higher using movable platforms with the help of a gravity-powered rifle, capable of moving and rotating them, as well as the asteroids crossing our path.
-
+                In Slime & Slice, two cooks must cooperate in order to prepare pizzas using the sauce from the slimes that attack them, as well as the magical ingredients they discover underground.
               </p>
 
               <br>
 
               <p class="project-details__desc-para">
-                The game was initially inspired by children’s fables, such as <i>The Little Prince</i> (1943), both narratively and aesthetically. The player must flee their dying planet, with its explosion chasing them into space. The objective is to escape the explosion’s radius and the planet’s gravitational field. In parallel, the player was meant to carry the last flower of their planet throughout their journey in order to preserve it. Along the way, the player would have encountered characters living on moons, resigned to dying in the imminent explosion, in a way almost similar to <i>Outer Wilds</i> (2019).
-              The project’s narrative ambitions had, obviously, to be set aside for this proof of concept, and the mechanic of transporting the flower was also abandoned for the sake of simplicity. However, in future iterations, these facets of the experience could have been implemented, in addition to mechanics for the random generation of platforms in order to add replayability, comparable to <i>roguelike</i> games.
+                Players must complete as many orders as possible within a strict time limit. During this time, they will have to fight and avoid the slimes surrounding them.
+                They will also need to make use of their different weapons (knife, spatula, and rolling pin) in order to efficiently achieve a high score and clear the level.
+              </p>
             </div>
 
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Demo</h3>
 
-              <div id="ytplayer"></div>
-              <div id="ytplayer2"></div>
-
-              <script>
-                var tag = document.createElement('script');
-                tag.src = "https://www.youtube.com/iframe_api";
-                var firstScriptTag = document.getElementsByTagName('script')[0];
-                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-                var player;
-                var player2;
-
-                function onYouTubeIframeAPIReady() {
-                  player = new YT.Player('ytplayer', {
-                    height: '360',
-                    width: '100%',
-                    videoId: 'UDb6tphVTNM'
-                  });
-
-                  player2 = new YT.Player('ytplayer2', {
-                    height: '360',
-                    width: '100%',
-                    videoId: '5Foxrcs7JMI'
-                  });
-                }
-              </script>
+              <img
+              src="/assets/gif/SlimeGif.gif"
+              alt="Project Image"
+              class="project-details__showcase-img"
+              />              
 
             </div>
+           
 
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Images</h3>
 
               <img
-              src="/assets/png/SpaceOutTuto.png"
+              src="/assets/png/SlimeIntro.png"
               alt="Project Image"
               class="project-details__showcase-img"
               />
 
               <img
-              src="/assets/png/SpaceOutGrav.png"
+              src="/assets/png/SlimeGameplay.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+              />
+
+              <img
+              src="/assets/png/SlimeLvl2.png"
               alt="Project Image"
               class="project-details__showcase-img"
               />
@@ -184,38 +169,21 @@
             <div class="project-details__desc">
               <h3 class="project-details__content-title">Role and Contribution</h3>
               <p class="project-details__desc-para">
-                During this project, I made major design decisions on the mechanics, notably on the basic functioning of the gravitational rifle, as well as on the progression from planet to planet. I also created two of the six prototype levels: level 3 and level 6. Finally, I was the lead programmer for a multitude of mechanics and systems in the game, including, but not limited to: character controller, gravitational rifle, platform movement, implementation of music and explosions, etc.
+                Slime & Slice is a cooperative game developed in Unity 6 inspired by Overcooked, in which two chefs must cook and assemble pizzas while avoiding and fighting hordes of slimes.
+                The game was developed during the summer of 2025 in order to participate in the Rookies competition of the same year, but was not completed in time.
               </p>
               
             </div>
 
 
-            <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">More Examples</h3>
-
-              <img
-              src="/assets/gif/SpaceOutAscend.gif"
-              alt="Project Image"
-              class="project-details__showcase-img"
-              />
-
-              <img
-              src="/assets/gif/SpaceOutTps.gif"
-              alt="Project Image"
-              class="project-details__showcase-img"
-              />
-
-              
-
-            </div>
-
+            
         
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Tasks</h3>
               <div class="skills">
                 <div class="skills__skill">Systems Design</div>
                 <div class="skills__skill">Level Design </div>
-                <div class="skills__skill">Programming & Implementation</div>
+                <div class="skills__skill">Programming</div>
               </div>
             </div>
             <div class="project-details__tools-used">
@@ -230,7 +198,7 @@
               <h3 class="project-details__content-title">Project Links</h3>
 
               <a
-                href="./homeEn.html"
+                href="https://github.com/ZachariePage/catcafegame"
                 class="btn btn--med btn--theme project-details__links-btn"
                 target="_blank"
                 >Link to Github</a
@@ -238,7 +206,7 @@
               <a
                 href="https://site-outlander.carrd.co/?fbclid=IwAR0J8DfI8TBlsHPua2cAD6bO9uvyITnSok4nzeA6vBPHemTlDUA3S0nh7hg"
                 class="btn btn--med btn--theme-inv project-details__links-btn"
-                target="_blank"
+                target="_blank" style="display: none;"
                 >Link to build</a
               >
             </div>
