@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Space Out</title>
-    <meta name="description" content="Space Out" />
+    <title>Slime & Slice</title>
+    <meta name="description" content="Slime & Slice" />
 
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" type="image/x-icon" href="./assets/png/SpaceOutTitle.png">
+    <link rel="icon" type="image/x-icon" href="./assets/png/SlimeNslice.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -95,11 +95,10 @@
       </header>
     <section class="project-cs-hero">
       <div class="project-cs-hero__content">
-        <h1 class="heading-primary">Space Out</h1>
+        <h1 class="heading-primary">Slime & Slice</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
-            Le développement de cette preuve de concept a eu lieu durant la session d'automne 2025 du baccalauréat en création de jeu vidéo (concentration design) à l'Université du Québec en Abiti-Témiscamingue (UQAT), durant le cours de Prototypage et preuve de concept (DJV1302).
-          </p>
+            Slime & Slice a été conceptualisé et développé durant l'été 2025 sur Unity 6 pour le concours Rookies de la même année. 
         </div>
         <!--<div class="project-cs-hero__cta">
           <a href="https://www.roblox.com/groups/4909412/Conquest-Studio#!/about" class="btn btn--bg" target="_blank">Lien au Groupe</a>
@@ -111,39 +110,34 @@
         <div class="project-details__content">
           <div class="project-details__showcase-img-cont">
             <img
-              src="/assets/png/SpaceOutTitle.png"
+              src="/assets/png/SlimeNslice.png"
               alt="Project Image"
               class="project-details__showcase-img"
             />
           </div>
           <div class="project-details__content-main">
             <div class="project-details__desc">
-              <h3 class="project-details__content-title">Survol et inspiration</h3>
+              <h3 class="project-details__content-title">Survol</h3>
               <p class="project-details__desc-para">
-                Space Out est une preuve de concept réalisée sur Unity 6 et conceptualisée sur Miro. L’idée du jeu est simple : nous sommes le seul survivant d’une planète prête à exploser.
-                Le joueur doit plateformer de plus en plus haut à l’aide de plateformes amovibles grâce à un fusil aux pouvoirs gravitationnels, capable de déplacer et de tourner celles-ci ainsi que
-                les astéroïdes croisant notre passage.
+                Dans Slime & Slice, deux cuisinier doivent coopérer afin de cuisiner des pizzas à partir de la sauce des slimes qui les attaques ainsi que 
+                les ingrédients magiques qu'ils découvrent sous terre. 
 
               </p>
 
               <br>
 
               <p class="project-details__desc-para">
-                Le jeu était initialement inspiré de fables pour enfants, telles que <i>Le Petit Prince</i> (1943), narrativement, mais aussi esthétiquement. Le joueur doit fuir sa planète mourante,
-                avec son explosion qui le poursuit jusque dans l’espace. Le but étant de fuir le rayon de l’explosion et le champ gravitationnel de la planète. Parallèlement, le joueur devait transporter la dernière fleur de sa planète dans son périple,
-                afin de la préserver. Sur son chemin, le joueur aurait rencontré des personnages situés sur les lunes, résolus à mourir dans l’explosion imminente, presque de manière similaire à <i>Outer Wilds</i> (2019).
-                Les ambitions narratives du projet ont, évidemment, dû être mises de côté pour cette preuve de concept, et la mécanique du transport de la fleur a aussi été abandonnée pour la simplicité du projet.
-                Toutefois, dans des itérations futures, ces facettes de l’expérience auraient pu être implémentées, en plus de mécaniques de génération aléatoire des plateformes afin d’ajouter à la rejouabilité, comparable aux jeux <i>roguelike</i>.
+                Les joueurs doivent compléter le plus de commandes possible à l'intérieur d'une stricte limite de temps. Durant ce temps, ils devront combattre et éviter les slimes qui les entourent. 
+                Ils devront aussi faire utilisation de leurs différentes armes (couteau, spatule et rouleau) afin d'atteindre un haut score efficacement et passer le niveau. 
               </p>
              
             </div>
 
 
              <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Démonstrations</h3>
+              <h3 class="project-details__content-title">Démonstration vidéo</h3>
 
               <div id="ytplayer"></div>
-              <div id="ytplayer2"></div>
 
               <script>
                 var tag = document.createElement('script');
@@ -152,19 +146,12 @@
                 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
                 var player;
-                var player2;
 
                 function onYouTubeIframeAPIReady() {
                   player = new YT.Player('ytplayer', {
                     height: '360',
                     width: '100%',
                     videoId: 'UDb6tphVTNM'
-                  });
-
-                  player2 = new YT.Player('ytplayer2', {
-                    height: '360',
-                    width: '100%',
-                    videoId: '5Foxrcs7JMI'
                   });
                 }
               </script>
@@ -177,13 +164,36 @@
               <h3 class="project-details__content-title">Images</h3>
 
               <img
-              src="/assets/png/SpaceOutTuto.png"
+              src="/assets/png/SlimeIntro.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+              />
+
+              <img
+              src="/assets/png/SlimeGameplay.png"
               alt="Project Image"
               class="project-details__showcase-img"
               />
 
               <img
               src="/assets/png/SpaceOutGrav.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+              />
+            </div>
+
+
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Concepts d'art</h3>
+
+              <img
+              src="/assets/png/SlimeLevelConcept.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+              />
+
+              <img
+              src="/assets/png/SlimeTomatoConcept.png"
               alt="Project Image"
               class="project-details__showcase-img"
               />
@@ -194,25 +204,19 @@
             <div class="project-details__desc">
               <h3 class="project-details__content-title">Implication personnelle</h3>
               <p class="project-details__desc-para">
-                Durant ce projet, j’ai pris des décisions majeures de design sur les mécaniques, notamment sur le fonctionnement de base du fusil gravitationnel, ainsi que sur la progression de planète en planète. J’ai aussi
-                réalisé deux des six niveaux du prototype : le niveau 3 et le niveau 6. Enfin, j’ai été programmeur principal pour une multitude de mécaniques et de systèmes dans le jeu, incluant, mais sans s’y limiter : contrôleur de personnage,
-                fusil gravitationnel, déplacement des plateformes, implémentation de la musique et de l’explosion, etc.
+                Durant ce projet, j'ai été impliqué dans la conceptualisation, le design ainsi que l'implémentation & programmation de nombreuses mécaniques et systèmes. 
+                Sous cet ensemble de responsabilités j'ai été, personnellement responsable du tutoriel, du "Character Controller", du "Bootstrap" et de "l'Object Pool". 
+                J'ai également réalisé certains VFX et sons. 
               </p>
               
             </div>
 
 
             <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Autres exemples</h3>
+              <h3 class="project-details__content-title">Démonstration</h3>
 
               <img
               src="/assets/gif/SpaceOutAscend.gif"
-              alt="Project Image"
-              class="project-details__showcase-img"
-              />
-
-              <img
-              src="/assets/gif/SpaceOutTps.gif"
               alt="Project Image"
               class="project-details__showcase-img"
               />
@@ -225,9 +229,9 @@
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Tâches réalizées</h3>
               <div class="skills">
-                <div class="skills__skill">Programmation </div>
-                <div class="skills__skill">Design de mécaniques </div>
+                <div class="skills__skill">Design de mécaniques & systèmes </div>
                 <div class="skills__skill">Design de niveaux </div>
+                <div class="skills__skill">Programmation </div>
               </div>
             </div>
             <div class="project-details__tools-used">
@@ -242,7 +246,7 @@
               <h3 class="project-details__content-title">Lien au projet</h3>
 
               <a
-                href="https://github.com/NoahGendron/SpaceOut"
+                href="https://github.com/ZachariePage/catcafegame"
                 class="btn btn--med btn--theme project-details__links-btn"
                 target="_blank"
                 >Lien au Github</a
