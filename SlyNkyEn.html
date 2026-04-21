@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Slime & Slice</title>
-    <meta name="description" content="Slime & Slice" />
+    <title>SSly n' Ky: 2-in-1</title>
+    <meta name="description" content="Sly n' Ky: 2-in-1" />
 
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" type="image/x-icon" href="./assets/png/SlimeNslice.png">
+    <link rel="icon" type="image/x-icon" href="/assets/png/SpaceOutTitle.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,21 +35,21 @@
           <div class="header__main">
             <ul class="header__links">
               <li class="header__link-wrapper">
-                <a href="./index.html" class="header__link"> Accueil </a>
+                <a href="./homeEn.html" class="header__link"> Home </a>
               </li>
               <li class="header__link-wrapper">
-                <a href="./index.html#about" class="header__link">À propos </a>
+                <a href="./homeEn.html#about" class="header__link">About </a>
               </li>
               <li class="header__link-wrapper">
-                <a href="./index.html#projects" class="header__link">
-                  Projets
+                <a href="./homeEn.html#projects" class="header__link">
+                  Projects
                 </a>
               </li>
               <li class="header__link-wrapper">
-                <a href="./index.html#cv" class="header__link"> CV </a>
+                <a href="./homeEn.html#cv" class="header__link"> CV </a>
               </li>
               <li class="header__link-wrapper">
-                <a href="./index.html#contact" class="header__link"> Contact </a>
+                <a href="./homeEn.html#contact" class="header__link"> Contact </a>
               </li>
               
             </ul>
@@ -95,10 +95,13 @@
       </header>
     <section class="project-cs-hero">
       <div class="project-cs-hero__content">
-        <h1 class="heading-primary">Slime & Slice</h1>
+        <h1 class="heading-primary">Sly n' Ky: 2-in-1</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
-            Slime & Slice a été conceptualisé et développé durant l'été 2025 sur Unity 6 en collaboration avec des développeurs étudiants ainsi que de l'industrie. 
+            The development of Sly n' Ky took place during the Ubisoft Game Lab of 2026, you can find and download the game 
+            <strong><u><a class="link" href="https://shawnoboy.itch.io/sly-n-ky">HERE</a></u></strong>.
+         
+           </p>
         </div>
         <!--<div class="project-cs-hero__cta">
           <a href="https://www.roblox.com/groups/4909412/Conquest-Studio#!/about" class="btn btn--bg" target="_blank">Lien au Groupe</a>
@@ -110,107 +113,102 @@
         <div class="project-details__content">
           <div class="project-details__showcase-img-cont">
             <img
-              src="/assets/png/SlimeNslice.png"
+              src="/assets/png/SlyNky.png"
               alt="Project Image"
               class="project-details__showcase-img"
             />
           </div>
           <div class="project-details__content-main">
             <div class="project-details__desc">
-              <h3 class="project-details__content-title">Survol</h3>
+              <h3 class="project-details__content-title">Overview</h3>
               <p class="project-details__desc-para">
-                Dans Slime & Slice, deux cuisinier doivent coopérer afin de cuisiner des pizzas à partir de la sauce des slimes qui les attaques ainsi que 
-                les ingrédients magiques qu'ils découvrent sous terre. 
 
+                Sly n' Ky: 2-in-1 in is a cooperative 3D platformer and collectathon where each player embodies one of the two ends of an entity connected by a slinky. 
+                Each players must progress through the two levels while learning to overcome the constraint of the slinky, but also to use it as an advantage. This slinky limits the distance between the two players, but it can also serve as a spring and an elastic band to propel each other in order to reach heights that would otherwise be inaccessible.
+
+                According to the rules of the competition, the project had to be playable with at 
+                least two players and use only the directional pad as well as two main buttons on the 
+                controller, <strong>in the same spirit as games from the 80s and 90s.</strong>
               </p>
-
-              <br>
-
-              <p class="project-details__desc-para">
-                Les joueurs doivent compléter le plus de commandes possible à l'intérieur d'une stricte limite de temps. Durant ce temps, ils devront combattre et éviter les slimes qui les entourent. 
-                Ils devront aussi faire utilisation de leurs différentes armes (couteau, spatule et rouleau) afin d'atteindre un haut score efficacement et passer le niveau. 
-              </p>
-             
             </div>
 
+           <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Game Trailer</h3>
 
-             <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Démonstration</h3>
+              <div id="ytplayer"></div>
 
-              <img
-              src="/assets/gif/SlimeGif.gif"
-              alt="Project Image"
-              class="project-details__showcase-img"
-              />
+              <script>
+                  var tag = document.createElement('script');
+                  tag.src = "https://www.youtube.com/player_api";
+                  var firstScriptTag = document.getElementsByTagName('script')[0];
+                  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                  var player;
+                  function onYouTubePlayerAPIReady() {
+                  player = new YT.Player('ytplayer', {
+                    height: '360',
+                    width: '100%', //https://youtu.be/ZaO-auvHMME
+                    videoId: 'ZaO-auvHMME'
+                  });
+                  }
+              </script>
+
             </div>
-
-
-              
-            <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Images</h3>
-
-              <img
-              src="/assets/png/SlimeIntro.png"
-              alt="Project Image"
-              class="project-details__showcase-img"
-              />
-
-              <img
-              src="/assets/png/SlimeGameplay.png"
-              alt="Project Image"
-              class="project-details__showcase-img"
-              />
-
-              <img
-              src="/assets/png/SlimeLvl2.png"
-              alt="Project Image"
-              class="project-details__showcase-img"
-              />
-            </div>
-
 
             <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Concepts d'art</h3>
+              <h3 class="project-details__content-title">Gameplay GIFs</h3>
 
               <img
-              src="/assets/png/SlimeLevelConcept.png"
+              src="./assets/gif/introSlinky.gif"
               alt="Project Image"
               class="project-details__showcase-img"
               />
 
               <img
-              src="/assets/png/SlimeTomatoConcept.png"
+              src="./assets/gif/cinematicSlinky.gif"
+              alt="Project Image"
+              class="project-details__showcase-img"
+              />
+
+              <img
+              src="./assets/gif/demoSlinky.gif"
+              alt="Project Image"
+              class="project-details__showcase-img"
+              />
+
+              <img
+              src="./assets/gif/outroSlinky.gif"
               alt="Project Image"
               class="project-details__showcase-img"
               />
 
             </div>
-
 
             <div class="project-details__desc">
-              <h3 class="project-details__content-title">Implication personnelle</h3>
+              <h3 class="project-details__content-title">Role and Contribution</h3>
               <p class="project-details__desc-para">
-                Durant ce projet, j'ai été impliqué dans la conceptualisation, le design ainsi que l'implémentation & programmation de nombreuses mécaniques et systèmes. 
-                Sous cet ensemble de responsabilités j'ai été, personnellement responsable du tutoriel, du "Character Controller", du "Bootstrap" et de "l'Object Pool". 
-                J'ai également réalisé certains VFX et sons. 
+
+                 As a designer with extensive experience with Unity and C#, I initially worked very hard on coming up with game concepts and ideas and pitched them with my teammates until we found the best idea for the project. 
+                 Then, my role as a designer shifted to planning and devising mechanics related to the slinky'S abilities, but also design related to the game's structure and gameplay loop. 
+                 Once the conceptual aspect of development was finalized, I worked on level design, implementing audio, and some additional programming relating to LDO (Level Design Objects) mostly.
               </p>
               
             </div>
 
 
             
-
         
             <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Tâches réalizées</h3>
+              <h3 class="project-details__content-title">Tasks</h3>
               <div class="skills">
-                <div class="skills__skill">Design de mécaniques & systèmes </div>
-                <div class="skills__skill">Design de niveaux </div>
-                <div class="skills__skill">Programmation </div>
+                <div class="skills__skill">Conceptualizing</div>
+                <div class="skills__skill">Systems Design</div>
+                <div class="skills__skill">Level Design </div>
+                <div class="skills__skill">Additional Programming</div>
               </div>
             </div>
             <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Outils utilisés</h3>
+              <h3 class="project-details__content-title">Tools Utilized</h3>
               <div class="skills">
                 <div class="skills__skill">Unity</div>
                 <div class="skills__skill">C#</div>
@@ -218,19 +216,13 @@
               </div>
             </div>
               <div class="project-details__links">
-              <h3 class="project-details__content-title">Lien au projet</h3>
+              <h3 class="project-details__content-title">Project Link</h3>
 
               <a
-                href="https://github.com/ZachariePage/catcafegame"
+                href="https://shawnoboy.itch.io/sly-n-ky"
                 class="btn btn--med btn--theme project-details__links-btn"
                 target="_blank"
-                >Lien au Github</a
-              >
-              <a
-                href="https://github.com/NoahGendron/SpaceOut"
-                class="btn btn--med btn--theme-inv project-details__links-btn"
-                target="_blank" style="display: none;"
-                >Lien au build</a
+                >Itch.io Page</a
               >
             </div>
           </div>
@@ -284,6 +276,6 @@
         </div>
       </div>
     </footer>
-    <script src="/index.js"></script>
+    <script src="/indexEn.js"></script>
   </body>
 </html>
