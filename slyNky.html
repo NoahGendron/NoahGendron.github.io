@@ -153,19 +153,74 @@
               <h3 class="project-details__content-title">Mon rôle</h3>
 
                  <p class="project-details__desc-para">
-                    En tant que designer sur le projet avec beaucoup d'expérience avec Unity et en C#, j'ai surtout travaillé sur la conception de l'idée de base, la proposition de ces dites idées, ainsi que la planification des mécaniques liées au slinky.
-                    Une fois la phase de conception terminée, je suis passé au design de niveau ainsi qu'à la programmation additionnelle, entre autres d'aspects liés à ceux-ci.
+                    En tant que designer sur le projet, j'ai conceptualisé et planifié (Miro, Fibery) les capacités et mouvements possible du slinky ainsi que les contrôles et habiletés de chaque joueur. 
+                    Une fois la phase de conception terminée, mon travail s'est porté sur le design de niveau et l'implémentation et le placement de LDO (Level Design Object) ainsi que de la programmation additionnelle (C#) en lien avec ceux-ci.
                  </p>
             </div>
 
-            <!--<div class="project-details__tools-used">
+            <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Approche de design</h3>
+                  <p class="project-details__desc-para">
+                    <b>Conception 3C</b>
+                    <br><br>
+                    Afin d'exploiter le plein potentiel de la prémisse du slinky, il fallait d'abord déterminer toutes les capacités de ce dernier réalisables à l'intérieur des contraintes du concours. 
+                    La première de ces capacités fut celle du "slingshot", permettant aux joueurs de se propulser avec la force du ressort afin d'atteindre des hauteurs autrement inaccessibles. 
+                    <img
+                    src="./assets/gif/demoSlinky.gif"
+                    alt="Project Image"
+                    class="project-details__showcase-img"
+                    />
+                    Toutefois, pour laisser les joueurs réaliser ce mouvement, il fallait leur donner la capacité de créer et de relâcher une tension dans le slinky, ce qui a mené à l'ajout du saut et d'une morsure laissant le joueur s'accrocher à toutes les surfaces du jeu.
+
+                    En conséquence, il fallait un angle de caméra laissant voir la profondeur et la hauteur du terrain de jeu. Optant initiallement pour des plans de caméra fixes à la <i>Resident Evil</i> présentant plusieurs problèmes, notamment 
+                    une friction importante avec les transitions d'angles de caméra. 
+                    <img
+                      src="./assets/jpeg/slinkyFixedCam.jpg"
+                      alt="Project Image"
+                      class="project-details__showcase-img"
+                      />
+                    Nous nous sommes alors résolus à utiliser une caméra ressemblante celle retrouvée dans <i>Super Mario: 3D World</i>, présentant l'entièreté du terrain de jeu immédiat sans interruptions. 
+                    Cette décision était toutefois risquée, car un monde 3D avec une caméra soulignant la profondeur nous éloignait des jeux de l'époque, donc du thème du concours, il a donc fallut conterbalancer avec une thématique forte, représenté par la nature "publicité de jouets" des environnements du jeu. 
+                    <img
+                    src="./assets/png/3dWorld.png"
+                    alt="Project Image"
+                    class="project-details__showcase-img"
+                    />
+                    <img
+                    src="./assets/gif/outroSlinky.gif"
+                    alt="Project Image"
+                    class="project-details__showcase-img"
+                    />
+                  </p>
 
                  <p class="project-details__desc-para">
-                    En tant que designer sur le projet avec beaucoup d'expérience avec Unity et en C#, j'ai surtout travaillé sur la conception de l'idée de base, la proposition de ces dites idées, ainsi que la planification des mécaniques liées au slinky.
-                    Une fois la phase de conception terminée, je suis passé au design de niveau ainsi qu'à la programmation additionnelle, entre autres d'aspects liés à ceux-ci.
+                    <b>Progression de niveaux</b>
+                    <br><br>
+                    Pour que les niveaux se distinguent, le deuxième niveau contient des LDO unique à lui-même, introduisant les trampolines, ainsi que, principalement, les tapis roulants (conveyor belts). 
+                    Comme onboarding (tutorialisation), le joueur est d'abord introduit aux tapis roulants, isolés de tous danger. 
+                    <img
+                    src="./assets/jpeg/conveyor1.jpg"
+                    alt="Project Image"
+                    class="project-details__showcase-img"
+                    />
+                    Ensuite, ceux-ci amènent les joueurs à des trampolines qui les transportent à une autre piste, cette fois plus dangereuse au danger, avec une séparation entre les deux chemins pour engendrer les joueurs à se distancier et à rester dans leurs propres chemins afin de collecter des bonbons, prenant des risques au passage. 
+                    <img
+                    src="./assets/jpeg/conveyor2.jpg"
+                    alt="Project Image"
+                    class="project-details__showcase-img"
+                    />
+
+                    Pendant ce temps, les joueurs peuvent observer en arrière-plan une autre piste transportant des bonbons, présageant un des défis à suivre. Au fil du niveau, la difficulté et complexité des défis proposés par 
+                    les tapis roulants augmentent. 
+                    <img
+                    src="./assets/jpeg/conveyor3.jpg"
+                    alt="Project Image"
+                    class="project-details__showcase-img"
+                    />
+                    Dans cet exemple, les joueurs les tapis roulants déroulent des obstacles sur les joueurs à contre-courant alors que ces derniers doivent éviter d'emmêler leur slinky alors qu'ils progressent sur la piste.
                  </p>
-            </div>-->
+                 
+            </div>
 
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">GIFs du jeu</h3>
@@ -182,26 +237,17 @@
               class="project-details__showcase-img"
               />
 
-              <img
-              src="./assets/gif/demoSlinky.gif"
-              alt="Project Image"
-              class="project-details__showcase-img"
-              />
+              
 
-              <img
-              src="./assets/gif/outroSlinky.gif"
-              alt="Project Image"
-              class="project-details__showcase-img"
-              />
+              
 
             </div>
 
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Tâches Réalisées</h3>
               <div class="skills">
-                <div class="skills__skill">Conception</div>
+                <div class="skills__skill">Design 3C</div>
                 <div class="skills__skill">Design de niveau</div>
-                <div class="skills__skill">Ajout d'effets sonores</div>
                 <div class="skills__skill">Programmation aditionnelle</div>
               </div>
             </div>
@@ -220,7 +266,19 @@
                 href="https://shawnoboy.itch.io/sly-n-ky"
                 class="btn btn--med btn--theme project-details__links-btn"
                 target="_blank"
-                >Lien au jeu</a
+                >Page Itch.io</a
+              >
+              <a
+                href="https://montreal.ubisoft.com/en/our-commitments/education/game-lab-competition/"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+                >Concours</a
+              >
+              <a
+                href="https://ici.radio-canada.ca/nouvelle/2251414/uqat-prix-concours-ubisoft-jeu-video?shem=dsdf,sharefoc,agadiscoversdl,,sh/x/discover/m1/4"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+                >RADIO CANADA</a
               >
             </div>
           </div>
