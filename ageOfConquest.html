@@ -148,7 +148,7 @@
               <h3 class="project-details__content-title">Mon rôle</h3>
 
                  <p class="project-details__desc-para">
-                    En tant que designer et programmeur sur le projet, j'ai conceptualisé et implémenté le système de combat, les trois différents modes de jeux et l'IA des ennemis du jeu. J'ai aussi programmé la fonctionnalité de tous les interfaces du jeu (inventaire, sélection de partie, etc.). 
+                    En tant que designer et programmeur sur le projet, j'ai conceptualisé et implémenté l'IA des ennemis, le système de combat et les trois différents modes de jeux. J'ai aussi programmé la fonctionnalité de tous les interfaces du jeu (inventaire, sélection de partie, etc.). 
                     Les animations de combat ont été également réalisées par moi-même. 
                  </p>
                  <img
@@ -163,9 +163,8 @@
 
               <h1 class="project-details__sub">Combat</h1>
               <p class="project-details__desc-para">
-                Le système de combat d’Age of Conquest repose sur une approche risk/reward inspirée des jeux d’action modernes. 
+                Le système de combat d’Age of Conquest repose sur une approche risk/reward inspirée de jeux comme <i>Sekiro: Shadows Die Twice</i>. 
                 Le joueur peut esquiver, bloquer ou parer les attaques ennemies tout en gérant son énergie et sa posture. 
-                Pour encourager l’agressivité tout en punissant l’imprudence, les joueurs deviennent vulnérables lorsqu’ils attaquent, les forçant à réfléchir au timing de leurs actions.
                 <br><br>
 
                 <img
@@ -173,13 +172,11 @@
                 alt="Posture system"
                 class="project-details__showcase-img"
                 />
-
-                Inspiré de <i>Sekiro: Shadows Die Twice</i>, le système de posture permet de rendre ennemis et joueurs vulnérables après une succession de parades ou d’attaques bloquées. 
-                Les roulades accordent du temps d’invincibilité mais coûtent de plus en plus d’énergie lorsqu’elles sont utilisées successivement, tandis que les parades deviennent plus difficiles à réussir si elles sont répétées trop souvent.
+                
+                Pour balancer les esquives répétées, chaque esquive réalisé en succession prend de plus en plus d'énergie. Additionnellement, la fenêtre de parade devient de plus en plus petite si l'habileté est utilisé plusieurs fois à l'intérieur d'une courte période. 
+                Ce système force les joueurs à former des stratégies et à apprendre les attaques des adversaires. 
                 <br><br>
-
-                Chaque catégorie d’armes possède ses propres animations, attaques, hitboxes et vitesses d’exécution. 
-                Les ennemis utilisent également ce même système de combat, créant des affrontements reposant sur le positionnement, le timing et la lecture des attaques adverses.
+                Chaque catégorie d'armes propose ses propres avantages et désavantages afin d'encourager différents styles de jeu et des combats dynamiques. 
               </p>
 
               <h1 class="project-details__sub">IA</h1>
@@ -190,19 +187,33 @@
               />
 
               <p class="project-details__desc-para">
-                L’intelligence artificielle d’Age of Conquest a été conçue afin de fonctionner dans les trois modes de jeu du projet tout en restant hautement modulaire. 
-                Les ennemis utilisent différents comportements de base — défensif, offensif et errant — pouvant ensuite être modifiés selon les besoins d’une mission ou d’un niveau.
-                <br><br>
+                L'IA du jeu est hautement modulaire pour que celle-ci serve chacun des trois modes de jeux. Pour commencer, chaque ennemi peut avoir des comportements de déplacements différents : <b>défensif, offensif ou errant</b>. 
+                Le premier voit l'ennemi défendre une position spécifique, le deuxième se rendre à un point spécifique dans la carte, et le troisième errer autour d'une zone à portée limitée. 
 
-                Chaque IA réagit dynamiquement à l’état, la distance et la position du joueur afin de déterminer ses déplacements, attaques et comportements. 
-                Les ennemis peuvent contourner le joueur, reculer, bloquer, esquiver, parer ou tenter de maintenir une distance avantageuse selon la situation.
-                <br><br>
+                Avec ce même système, les ennemis peuvent prendre plusieurs rôles différents. 
 
-                Le système permet également de modifier individuellement une grande quantité de paramètres : vitesse, agressivité, portée d’attaque, effets de statut, champ de vision, résistance, comportement de groupe, type de cible, etc.
                 <br><br>
+                En combat, les ennemis utilisent une <b>State Machine</b> partagée par toutes les entités du jeu afin de lire l'état et la distance de leurs adversaire (joueur ou IA) et ainsi former une stratégie de combat.
 
-                Afin d’éviter que les combats deviennent injustes, les IA suivent aussi plusieurs règles de coordination, limitant par exemple le nombre d’ennemis pouvant attaquer simultanément un même joueur. 
-                L’ensemble du système repose sur des state machines et des fonctions réutilisables afin de limiter la duplication de code et faciliter la création de nouveaux ennemis.
+                <br><br>
+                Ce système permet également de modifier une grande quantité de paramètres : 
+                <b>vitesse, agressivité, portée d’attaque, effets de statut, champ de vision, résistance, comportement de groupe, type de cible</b>, etc. 
+                Ces paramètres sont utilisés à grande efficacités pour créer des scénarios de gameplay unique dans chaque donjon du jeu. 
+                <img
+                src="./assets/png/crusader_stats.png"
+                alt="Mode selection"
+                class="project-details__showcase-img"
+                />
+                <i>Extrait des paramètres comportementaux et de combat de l’ennemi "Crusader"</i>
+                <img
+                src="./assets/png/npc_debug.jpg"
+                alt="Mode selection"
+                class="project-details__showcase-img"
+                />
+                <i>Outils debug pour visualiser les statistiques et comportements d'IA en temps réel</i>
+
+                <br><br>
+                Pour éviter les combats injustes, les ennemis suivent aussi des règles de coordination, limitant, par exemple, le nombre d'ennemis pouvant attaquer en même temps. 
               </p>
 
               <h1 class="project-details__sub">Modes de jeu</h1>
@@ -211,34 +222,35 @@
               alt="Mode selection"
               class="project-details__showcase-img"
               />
-
+              <br><br>
               <h2>Campagne</h2>
               <p class="project-details__desc-para">
-                Le mode Campagne est orienté PvE et peut être joué seul ou avec jusqu’à trois autres joueurs. 
-                Chaque mission possède ses propres objectifs, événements et défis conçus manuellement afin de créer des situations variées et encourager l’exploration.
+                Mode orienté PvE avec objectifs et événements distinctifs.
                 <br><br>
+                À la fin de chaque mission, les récompenses données aux joueurs sont déterminées par un système de score prenant en compte : 
+                <b>le temps, les ennemis éliminés et le nombre de morts du joueur</b>, etc. Ce système encourage la rejouabilité et l’optimisation des stratégies.
 
-                Les récompenses sont déterminées par un système de score prenant en compte le temps, les ennemis éliminés et le nombre de morts du joueur, encourageant la rejouabilité et l’optimisation des performances.
+                <br><br>
+                L'apparition des ennemis dans ce mode ainsi que le prochain est partiellement aléatoire et dépendant du nombre de joueurs présent dans la partie afin de renforcer la rejouabilité. 
               </p>
 
               <h2>Survie</h2>
               <p class="project-details__desc-para">
-                Le mode Survie oppose les joueurs à des vagues d’ennemis de plus en plus difficiles. 
-                Les joueurs doivent défendre leur base tout en utilisant des fonds obtenus entre les vagues afin d’améliorer leurs statistiques et leurs défenses.
+                Le mode Survie voit les joueurs opposer des vagues d'ennemis de plus en plus difficiles. 
                 <br><br>
-
-                Les vagues utilisent un système dynamique déterminant les ennemis à faire apparaître selon la difficulté, le nombre de joueurs et le rythme de la partie afin de maintenir une pression constante sans rendre les affrontements injustes.
+                Un système dynamique a été créer pour modifier les vagues selon : <b>le niveau de difficulté, le nombre de joueurs présent et le rythme de la partie.</b>
+                Les vagues sont séparées en catégories et chacune peut apparaître selon la difficultée actuelle de la partie. À toutes les 5 vagues, le système assure une vague de Boss. 
               </p>
 
               <h2>Bataille en équipe</h2>
               <p class="project-details__desc-para">
-                Le mode Bataille en équipe mélange PvP et PvE dans des affrontements où chaque équipe doit défendre son général tout en éliminant celui de l’équipe adverse.
+                Le mode Bataille en équipe mélange PvP et PvE dans des affrontements où chaque équipe doit défendre sa base.
                 <br><br>
 
-                Les joueurs peuvent améliorer des structures, acheter des avant-postes, invoquer des renforts ou gérer l’économie de leur équipe afin de prendre l’avantage sur le terrain.
+                Pour ajouter un élément de stratégie et afin d'approfondir le gameplay défensif, les joueurs peuvent construire ou améliorer des structures (tours, casernes, murs défensifs) afin de mieux protéger leur base. 
                 <br><br>
 
-                Afin d’éviter qu’un écart de progression rende les affrontements injustes, les statistiques des joueurs sont partiellement ajustées selon leurs adversaires, permettant aux nouveaux joueurs de rester compétitifs face aux plus expérimentés.
+                Afin d’éviter qu’un écart de progression rende les affrontements injustes, les statistiques des joueurs sont ajustées selon leurs adversaires, permettant aux nouveaux joueurs de combattres des joueurs de plus haut niveaux sur un pied d'égalité.
               </p>
             </div>
 
@@ -265,8 +277,9 @@
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Tâches Réalisées</h3>
               <div class="skills">
+                <div class="skills__skill">AI Design</div>
                 <div class="skills__skill">Combat Design</div>
-                <div class="skills__skill">3C Design</div>
+                <div class="skills__skill">3C</div>
                 <div class="skills__skill">Programming</div>
                 <div class="skills__skill">Animating</div>
                 <div class="skills__skill">Rigging</div>
