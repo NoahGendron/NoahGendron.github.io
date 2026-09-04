@@ -4,13 +4,5 @@
 
 ----
 
-<br/>
-
-## Contenu
-
-- ### **Liste des compétences** 
-- ### **Description** 
-- ### **Informations de contact** 
-- ### **Description** 
 
 
