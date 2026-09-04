@@ -99,8 +99,7 @@
         <div class="project-cs-hero__info">
           <p class="text-primary">
             <strong>Winner – Best Prototype, Ubisoft Game Lab 2026</strong><br>
-            Project developed over the three months of the contest. Download and play the game 
-            <strong><u><a class="link" href="https://shawnoboy.itch.io/sly-n-ky">HERE</a></u></strong>.
+            Download and play <strong><u><a class="link" href="https://shawnoboy.itch.io/sly-n-ky">HERE</a></u></strong>!
          
            </p>
         </div>
@@ -121,64 +120,27 @@
           </div>
           <div class="project-details__content-main">
             <div class="project-details__desc">
-            <h3 class="project-details__content-title">Project Description</h3>
-            <p class="project-details__desc-para">
-              Sly n' Ky: 2-in-1 Toy is a cooperative 3D platformer where two players control the ends of a toy connected by a slinky. 
-              Players must learn to overcome levels by using the spring's tension to their advantage, even if it also comes with disadvantages.
 
-              <br><br>
-              
-              Developed as part of the Ubisoft Game Lab 2026 competition, the project had to be playable with a minimum of two players and use only the D-Pad alongside two face buttons of an Xbox controller, in the spirit of the imposed theme: the 80s and 90s.
-            </p>
-            <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Nominations</h3>
-
-              <span class="project-details__desc-para">As well as winning Best Prototype, the game was nominated for :</span>
-              <br><br>
-
-              <div class="skills">
-                <div class="skills__skill">Best Game Design</div><br>
-                <div class="skills__skill">Best Creativity and Integration of the Theme</div><br>
-                <div class="skills__skill">Meilleur qualité des '3C' (camera, characters, controls)</div><br>
-                <div class="skills__skill">Meilleur expérience utilisateur</div><br>
-                <div class="skills__skill">Meilleur innovation technique</div><br>
-              </div>
-            </div>
-
-            </div>
-
-             <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Gameplay Video</h3>
-
-              <div id="ytplayer"></div>
-
-              <script>
-                  var tag = document.createElement('script');
-                  tag.src = "https://www.youtube.com/player_api";
-                  var firstScriptTag = document.getElementsByTagName('script')[0];
-                  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-                  var player;
-                  function onYouTubePlayerAPIReady() {
-                  player = new YT.Player('ytplayer', {
-                    height: '360',
-                    width: '100%', //https://youtu.be/ZaO-auvHMME
-                    videoId: 'ZaO-auvHMME'
-                  });
-                  }
-              </script>
-
-            </div>
-
+            
             
 
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">My Role</h3>
 
+                
                  <p class="project-details__desc-para">
-                    As a designer on the project, I conceptualized and planned the slinky's possible abilities and movements as well as the players' controls and abilities. 
-                    Once the conception phase was completed, my work focused on level design and the implementation and placement of LDOs (Level Design Objects), alongside additional programming (C#) related to them.
+                  <li>
+                    <ul>3C Design (Slinky abilities, character feel, movement, camera point of view)</ul>
+                    <ul>Blocking and Designing levels</ul>
+                    <ul>LDO Prototyping for fast and iterative testing of the second level's mechanical twists</ul>
+                  </li>
                  </p>
+            </div>
+
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Technical Overview</h3>
+
+                 
             </div>
 
             <div class="project-details__tools-used">
@@ -204,7 +166,6 @@
                     /> 
                  </p>
             </div>
-
 
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Design Approach</h3>
@@ -280,8 +241,62 @@
                  
             </div>
 
+
+            <!-- Superfluous stuff -->
+            <h3 class="project-details__content-title">Project Description</h3>
+            <p class="project-details__desc-para">
+              Sly n' Ky: 2-in-1 Toy is a cooperative 3D platformer where two players control the ends of a toy connected by a slinky. 
+              Players must learn to overcome levels by using the spring's tension to their advantage, even if it also comes with disadvantages.
+
+              <br><br>
+              
+              Developed as part of the Ubisoft Game Lab 2026 competition, the project had to be playable with a minimum of two players and use only the D-Pad alongside two face buttons of an Xbox controller, in the spirit of the imposed theme: the 80s and 90s.
+            </p>
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Nominations</h3>
+
+              <span class="project-details__desc-para">As well as winning Best Prototype, the game was nominated for :</span>
+              <br><br>
+
+              <div class="skills">
+                <div class="skills__skill">Best Game Design</div><br>
+                <div class="skills__skill">Best Creativity and Integration of the Theme</div><br>
+                <div class="skills__skill">Meilleur qualité des '3C' (camera, characters, controls)</div><br>
+                <div class="skills__skill">Meilleur expérience utilisateur</div><br>
+                <div class="skills__skill">Meilleur innovation technique</div><br>
+              </div>
+            </div>
+
+            </div>
+
+             
+
+
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Game Excerpts</h3>
+
+              <!--Gameplay Video -->
+              <div class="project-details__tools-used">
+                <div id="ytplayer">
+                </div>
+
+                <script>
+                    var tag = document.createElement('script');
+                    tag.src = "https://www.youtube.com/player_api";
+                    var firstScriptTag = document.getElementsByTagName('script')[0];
+                    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                    var player;
+                    function onYouTubePlayerAPIReady() {
+                    player = new YT.Player('ytplayer', {
+                      height: '360',
+                      width: '100%', //https://youtu.be/ZaO-auvHMME
+                      videoId: 'ZaO-auvHMME'
+                    });
+                    }
+                </script>
+              </div>
+
 
               <img
               src="./assets/gif/introSlinky.gif"
