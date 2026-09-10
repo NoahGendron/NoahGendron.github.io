@@ -110,7 +110,11 @@
                 <div class="projects__row-content">
                     <h3 class="projects__row-content-title">Sly n' Ky: 2-in-1 Toy</h3>
                     <p class="projects__row-content-desc">
-                        <strong>Gameplay & Level Designer</strong> — 3C (Character, Camera, Controls), level design (blocking, LDO)
+                        <strong>Role:</strong>  Gameplay & Level Designer — 3C (Character, Camera, Controls), level design (blocking, LDO)
+
+                        <br>
+
+                        <strong>Development Time:</strong> 4 months —  January 2026 to April 2026
 
                         <br><br>
 
@@ -121,21 +125,29 @@
                         Players must progress through levels while learning to overcome the constraint 
                         of the slinky, but also use it to their advantage.
                     </p>
-                    <a
-                            href="./slyNkyEn.html"
-                            class="btn btn--med btn--theme dynamicBgClr"
-                            target="_blank"
-                    >Overview</a
-                    >
                 </div>
-                
           </div>
 
         <div class="project-details__content">
-
-
           <div class="project-details__content-main">
             <div class="project-details__desc">
+
+
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Nominations</h3>
+
+              <span class="project-details__desc-para">As well as winning Best Prototype, the game was nominated for :</span>
+              <br><br>
+
+              <div class="skills">
+                <div class="skills__skill">Best Game Design</div><br>
+                <div class="skills__skill">Best Creativity and Integration of the Theme</div><br>
+                <div class="skills__skill">Meilleur qualité des '3C' (camera, characters, controls)</div><br>
+                <div class="skills__skill">Meilleur expérience utilisateur</div><br>
+                <div class="skills__skill">Meilleur innovation technique</div><br>
+              </div>
+            </div>
+
 
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">My Role</h3>
@@ -149,32 +161,34 @@
 
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Technical Overview</h3>
-
+                <p class="project-details__desc-para">
+                  Link To Technical Demonstration Video : <!-- put link here eventually -->
+                </p>
                  
             </div>
 
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Preproduction Documentation</h3>
 
-                 <p class="project-details__desc-para">
-                    Documentation excerpts created during the conception phase: controls, slinky abilities, LDO list, and 2D plans for possible levels.                    
-                    <br><br>
-                    <img
-                    src="./assets/png/SLINKYcapabilities.png"
-                    alt="Overview of slinky"
-                    class="project-details__showcase-img"
-                    />
-                    <img
-                    src="./assets/png/LDOcontrols.png"
-                    alt="Controls & LDO"
-                    class="project-details__showcase-img"
-                    />
-                    <img
-                    src="./assets/png/levels.png"
-                    alt="2D level plans"
-                    class="project-details__showcase-img"
-                    /> 
-                 </p>
+                <p class="project-details__desc-para">
+                  Documentation excerpts created during the conception phase: controls, slinky abilities, LDO list, and 2D plans for possible levels.                    
+                  <br><br>
+                  <img
+                  src="./assets/png/SLINKYcapabilities.png"
+                  alt="Overview of slinky"
+                  class="project-details__showcase-img"
+                  />
+                  <img
+                  src="./assets/png/LDOcontrols.png"
+                  alt="Controls & LDO"
+                  class="project-details__showcase-img"
+                  />
+                  <img
+                  src="./assets/png/levels.png"
+                  alt="2D level plans"
+                  class="project-details__showcase-img"
+                  /> 
+                </p>
             </div>
 
             <div class="project-details__tools-used">
@@ -252,30 +266,7 @@
             </div>
 
 
-            <!-- Superfluous stuff -->
-            <h3 class="project-details__content-title">Project Description</h3>
-            <p class="project-details__desc-para">
-              Sly n' Ky: 2-in-1 Toy is a cooperative 3D platformer where two players control the ends of a toy connected by a slinky. 
-              Players must learn to overcome levels by using the spring's tension to their advantage, even if it also comes with disadvantages.
-
-              <br><br>
-              
-              Developed as part of the Ubisoft Game Lab 2026 competition, the project had to be playable with a minimum of two players and use only the D-Pad alongside two face buttons of an Xbox controller, in the spirit of the imposed theme: the 80s and 90s.
-            </p>
-            <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Nominations</h3>
-
-              <span class="project-details__desc-para">As well as winning Best Prototype, the game was nominated for :</span>
-              <br><br>
-
-              <div class="skills">
-                <div class="skills__skill">Best Game Design</div><br>
-                <div class="skills__skill">Best Creativity and Integration of the Theme</div><br>
-                <div class="skills__skill">Meilleur qualité des '3C' (camera, characters, controls)</div><br>
-                <div class="skills__skill">Meilleur expérience utilisateur</div><br>
-                <div class="skills__skill">Meilleur innovation technique</div><br>
-              </div>
-            </div>
+            
 
             </div>
 
@@ -285,26 +276,14 @@
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Game Excerpts</h3>
 
+
               <!--Gameplay Video -->
               <div class="project-details__tools-used">
-                <div id="ytplayer">
-                </div>
 
-                <script>
-                    var tag = document.createElement('script');
-                    tag.src = "https://www.youtube.com/player_api";
-                    var firstScriptTag = document.getElementsByTagName('script')[0];
-                    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-                    var player;
-                    function onYouTubePlayerAPIReady() {
-                    player = new YT.Player('ytplayer', {
-                      height: '360',
-                      width: '100%', //https://youtu.be/ZaO-auvHMME
-                      videoId: 'ZaO-auvHMME'
-                    });
-                    }
-                </script>
+                <p class="project-details__desc-para">
+                  Link To Technical Demonstration Video : <a href="https://youtu.be/ZaO-auvHMME">https://youtu.be/ZaO-auvHMME</a> 
+                </p>
+                
               </div>
 
 
@@ -319,17 +298,8 @@
               alt="Project Image"
               class="project-details__showcase-img"
               />
-
             </div>
-
-            <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Tasks Completed</h3>
-              <div class="skills">
-                <div class="skills__skill">3C Design</div>
-                <div class="skills__skill">Level Design</div>
-                <div class="skills__skill">Additional Programming</div>
-              </div>
-            </div>
+            
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Tools Used</h3>
               <div class="skills">
@@ -338,9 +308,9 @@
                 <div class="skills__skill">Miro</div>
               </div>
             </div>
+
             <div class="project-details__links">
               <h3 class="project-details__content-title">Project Links</h3>
-
               <a
                 href="https://shawnoboy.itch.io/sly-n-ky"
                 class="btn btn--med btn--theme project-details__links-btn"
@@ -351,13 +321,13 @@
                 href="https://montreal.ubisoft.com/en/our-commitments/education/game-lab-competition/"
                 class="btn btn--med btn--theme project-details__links-btn"
                 target="_blank"
-                >Competition</a
+                >Competition Details</a
               > <br><br>
               <a
                 href="https://ici.radio-canada.ca/nouvelle/2251414/uqat-prix-concours-ubisoft-jeu-video?shem=dsdf,sharefoc,agadiscoversdl,,sh/x/discover/m1/4"
                 class="btn btn--med btn--theme project-details__links-btn"
                 target="_blank"
-                >RADIO CANADA</a
+                >RADIO CANADA Article</a
               >
             </div>
           </div>
@@ -385,13 +355,6 @@
               <span></span>
             </h2>
             <div class="main-footer__social-cont">
-              <!-- <a target="_blank" rel="noreferrer" href="#">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/linkedin-ico.png"
-                  alt="icon"
-                />
-              </a> -->
               <a target="_blank" rel="noreferrer" href="https://github.com/NoahGendron">
                 <img
                   class="main-footer__icon"
