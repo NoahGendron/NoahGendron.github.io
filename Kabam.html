@@ -97,6 +97,7 @@
           <span class="heading-sec__main">Projects</span>
         </h2>
 
+        <!-- Sly n Ky -->
         <div class="projects__row">
                     
             <div class="projects__row-img-cont">
@@ -126,7 +127,7 @@
                         of the slinky, but also use it to their advantage.
                     </p>
                 </div>
-          </div>
+        </div>
 
         <div class="project-details__content">
           <div class="project-details__content-main">
@@ -332,16 +333,241 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section id="projects" class="projects sec-pad">
-      <div class="main-container">
-        
 
-        
+           <!-- Age of Conquest -->
 
-        
+         <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                  src="/assets/png/AoC.png"
+                  alt="Software Screenshot"
+                  class="projects__row-img"
+                  loading="lazy"
+                />
+            </div>
+
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Age of Conquest</h3>
+              <p class="projects__row-content-desc">
+                  <strong>Role:</strong> Gameplay Designer & Programmer —  AI, 3C, combat, progression
+
+                  <br>
+
+                  <strong>Development Time:</strong> 4.5 years —  August 2020 to December 2024
+
+                  <br><br>
+
+                    <i>Age of Conquest</i> is an ambitious medieval action-adventure MMORPG.The game reached 
+                    <strong>140 concurrent players</strong> and received more than <strong>140,000 plays</strong>.              
+                  </p>
+              <a
+                      href="./ageOfConquestEn.html"
+                      class="btn btn--med btn--theme dynamicBgClr"
+                      target="_blank"
+              >Overview</a
+              >
+            </div>
+          </div>
+
+          <div class="project-details__content">
+
+            <div class="project-details__content-main">
+            
+
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">My Role</h3>
+                  <ul class="project-details__desc-para">
+                    <li>Combat Designer/Programmer with 10+ weapon types</li>
+                    <li>AI Designer/Programmer of 15+ enemy types & behaviours</li>
+                    <li>Progression & Systems Designer/Programmer (loot economy, balancing, level scaling) with 100+ items</li>
+                    <li>Character Animations for over 20+ characters</li>
+                  </ul>
+            </div>
+
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Technical Overview</h3>
+                  <p class="project-details__desc-para">
+                    Link To Technical Demonstration Video : <!-- put link here eventually -->
+                  </p>
+            </div>
+
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Design & Systems</h3>
+
+              <h1 class="project-details__sub">Combat</h1>
+              <p class="project-details__desc-para">
+                Age of Conquest's combat system is based on a risk/reward approach inspired by games such as <i>Sekiro: Shadows Die Twice</i>. 
+                The player can dodge, block or parry enemy attacks while managing energy and posture. 
+                <br><br>
+
+                <img
+                src="./assets/gif/posturebreak.gif"
+                alt="Posture system"
+                class="project-details__showcase-img"
+                />
+                
+                To balance repeated dodges, each dodge performed in succession consumes more and more energy. Additionally, the parry window becomes smaller if the ability is used multiple times within a short period. 
+                This system forces players to form strategies and learn enemy attack patterns. 
+                <br><br>
+                Each weapon category offers its own advantages and disadvantages in order to encourage different playstyles and dynamic combat. 
+              </p>
+
+              <h1 class="project-details__sub">AI</h1>
+              <img
+              src="./assets/gif/crusader_demo.gif"
+              alt="Crusader AI"
+              class="project-details__showcase-img"
+              />
+
+              <p class="project-details__desc-para">
+                The game's AI is highly modular in order to serve each of the three game modes. To begin with, each enemy can have different movement behaviors: <b>defensive, offensive or wandering</b>. 
+                The first sees the enemy defend a specific position, the second move toward a specific point on the map, and the third wander around a limited area. 
+
+                With this same system, enemies can take on many different roles. 
+
+                <br><br>
+                In combat, enemies use a shared <b>State Machine</b> across all game entities in order to read the state and distance of their opponents (player or AI) and form a combat strategy.
+
+                <br><br>
+                This system also allows the modification of a large amount of parameters: 
+                <b>speed, aggressiveness, attack range, status effects, field of view, resistance, group behavior, target type</b>, etc. 
+                These parameters are used extensively to create unique gameplay scenarios in each dungeon of the game. 
+                <br><br>
+                <img
+                src="./assets/png/crusader_stats.png"
+                alt="Mode selection"
+                class="project-details__showcase-img"
+                />
+                <i>Excerpt of the behavioral and combat parameters of the enemy "Crusader"</i>
+                <br><br>
+                <img
+                src="./assets/png/npc_debug.jpg"
+                alt="Mode selection"
+                class="project-details__showcase-img"
+                />
+                <i>Debug tools used to visualize AI statistics and behaviors in real time</i>
+
+                <br><br>
+                To avoid unfair combat situations, enemies also follow coordination rules limiting, for example, the number of enemies able to attack at the same time. 
+              </p>
+
+              <h1 class="project-details__sub">Game Modes</h1>
+              
+              <h1>Campaign</h1>
+              <p class="project-details__desc-para">
+                PvE-oriented mode with distinct objectives and events.
+                <br><br>
+                At the end of each mission, player rewards are determined by a scoring system taking into account:
+                <b>time, enemies defeated and player deaths</b>. This system encourages replayability and strategy optimization.
+
+                <br><br>
+                Enemy spawns in this mode as well as the next one are partially random and dependent on the number of players present in the match in order to reinforce replayability. 
+              </p>
+              <img
+              src="./assets/gif/gameselect.gif"
+              alt="Mode selection"
+              class="project-details__showcase-img"
+              />
+              <br><br>
+              <h1>Survival</h1>
+              <p class="project-details__desc-para">
+                Survival mode pits players against increasingly difficult waves of enemies. 
+                <br><br>
+                A dynamic system was created to modify waves according to: <b>difficulty level, player count and match pacing.</b>
+                Waves are separated into categories and each can appear depending on the current difficulty of the match. Every 5 waves, the system guarantees a Boss wave. 
+              </p>
+
+              <h1>Team Battle</h1>
+              <p class="project-details__desc-para">
+                Team Battle mode mixes PvP and PvE in matches where each team must defend its base and destroy the enemy's.
+                <br><br>
+
+                To add a strategic element and deepen defensive gameplay, players can build or upgrade structures (towers, barracks, defensive walls) in order to better protect their base. 
+                <br><br>
+
+                In order to prevent progression gaps from making fights unfair, player statistics are adjusted according to their opponents, allowing newer players to fight higher level players on equal footing.
+              </p>
+            </div>
+
+          
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Project Overview</h3>
+              <p class="project-details__desc-para">
+                Age of Conquest is an MMORPG and action-adventure game with three distinct game modes 
+                and a large variety of content, including dozens of enemies, weapons and armor.
+                Each game mode can be played solo or in multiplayer. The game reached a peak of <strong>140 concurrent players</strong> and received over <strong>138,000 visits</strong>.
+              </p>
+            </div>
+
+
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Game Excerpts</h3>
+              <div id="ytplayer"></div>
+
+              <script>
+                  var tag = document.createElement('script');
+                  tag.src = "https://www.youtube.com/player_api";
+                  var firstScriptTag = document.getElementsByTagName('script')[0];
+                  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                  var player;
+                  function onYouTubePlayerAPIReady() {
+                  player = new YT.Player('ytplayer', {
+                    height: '360',
+                    width: '100%', //https://youtu.be/TCx65yQFZxc
+                    videoId: 'SFrUGAc54oI'
+                  });
+                  }
+              </script>
+
+
+              <img
+              src="./assets/png/AocPlains.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+              />
+
+
+              <img
+              src="./assets/png/Lobby.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+              />
+
+            </div>
+           
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools Utilized</h3>
+              <div class="skills">
+                <div class="skills__skill">Lua Scripting</div>
+                <div class="skills__skill">Roblox Studio</div>
+                <div class="skills__skill">Roblox Animator Plugin</div>
+                <div class="skills__skill">Blender</div>
+                <div class="skills__skill">Trello</div>
+              </div>
+            </div>
+
+
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">Project Link</h3>
+
+              <a
+                href="https://www.roblox.com/games/14091994734/Age-Of-Conquest"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+                >Link to Game</a
+              >
+              <a
+                href="https://www.roblox.com/groups/4909412/Conquest-Studio#!/about"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >Group Link</a
+              >
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
