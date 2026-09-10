@@ -149,7 +149,7 @@
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Design & Systems</h3>
 
-              <h1 class="project-details__sub">Combat</h1>
+              <h1 class="project-details__sub">Combat System</h1>
               <p class="project-details__desc-para">
                 Age of Conquest's combat system is based on a risk/reward approach inspired by games such as <i>Sekiro: Shadows Die Twice</i>. 
                 The player can dodge, block or parry enemy attacks while managing energy and posture. 
@@ -162,12 +162,11 @@
                 />
                 
                 To balance repeated dodges, each dodge performed in succession consumes more and more energy. Additionally, the parry window becomes smaller if the ability is used multiple times within a short period. 
-                This system forces players to form strategies and learn enemy attack patterns. 
                 <br><br>
                 Each weapon category offers its own advantages and disadvantages in order to encourage different playstyles and dynamic combat. 
               </p>
 
-              <h1 class="project-details__sub">AI</h1>
+              <h1 class="project-details__sub">Modular AI System</h1>
               <img
               src="./assets/gif/crusader_demo.gif"
               alt="Crusader AI"
@@ -175,18 +174,31 @@
               />
 
               <p class="project-details__desc-para">
-                The game's AI is highly modular in order to serve each of the three game modes. To begin with, each enemy can have different movement behaviors: <b>defensive, offensive or wandering</b>. 
-                The first sees the enemy defend a specific position, the second move toward a specific point on the map, and the third wander around a limited area. 
-
-                With this same system, enemies can take on many different roles. 
+                The game's AI is highly modular in order to serve each of the three game modes. 
+                To begin with, each enemy can have different movement behaviors: 
+                <ul class="project-details__desc-para">
+                  <li>Defensive: Protect a specific location & return to it if aggro'd</li>
+                  <li>Offensive: Take a designated path towards a point</li>
+                  <li>Wandering: Patrol around a limited area</li>
+                  <li>Following: Follow a moving target (player or AI)</li>
+                </ul>
 
                 <br><br>
                 In combat, enemies use a shared <b>State Machine</b> across all game entities in order to read the state and distance of their opponents (player or AI) and form a combat strategy.
 
                 <br><br>
                 This system also allows the modification of a large amount of parameters: 
-                <b>speed, aggressiveness, attack range, status effects, field of view, resistance, group behavior, target type</b>, etc. 
-                These parameters are used extensively to create unique gameplay scenarios in each dungeon of the game. 
+                <ul class="project-details__desc-para">
+                  <li>Movement & Attack Speed</li>
+                  <li>Agressiveness</li>
+                  <li>Attack & Aggro range</li>
+                  <li>Field of View (and if sight is required to aggro)</li>
+                  <li>Resistances/Defense</li>
+                  <li>Target type (player, AI, structure or all)</li>
+                  <li>Attack behaviour in groups</li>
+                  <li>Status Effect immunities & inflictions</li>
+                  <li>Etc.</li>
+                </ul>
                 <br><br>
                 <img
                 src="./assets/png/crusader_stats.png"
@@ -203,44 +215,61 @@
                 <i>Debug tools used to visualize AI statistics and behaviors in real time</i>
 
                 <br><br>
-                To avoid unfair combat situations, enemies also follow coordination rules limiting, for example, the number of enemies able to attack at the same time. 
+                Enemy coordination rules (GroupBypassDistance, GroupAttackingThreshold) limit how many enemies can attack one player simultaneously, helping prevent unfair encounters. 
               </p>
 
-              <h1 class="project-details__sub">Game Modes</h1>
+
+              <h1 class="project-details__sub">Gameplay Systems</h1>
               
-              <h1>Campaign</h1>
+              <h1>Dungeons</h1>
               <p class="project-details__desc-para">
-                PvE-oriented mode with distinct objectives and events.
-                <br><br>
-                At the end of each mission, player rewards are determined by a scoring system taking into account:
-                <b>time, enemies defeated and player deaths</b>. This system encourages replayability and strategy optimization.
+                PvE-oriented mode with distinct objectives and events. A dungeon's rewards are determined by: 
+                <ul class="project-details__desc-para">
+                  <li>Time</li>
+                  <li>Player Deaths</li>
+                  <li>Enemies defeated</li>
+                  <li>Etc.</li>
+                </ul>
+
+                <img
+                src="./assets/png/AoCdungeonReward.png"
+                alt="Mode selection"
+                class="project-details__showcase-img"
+                />
+                <i>Parameters that determine rewarded loot. Highlighted is the percentage of the reward affected by # of enemy KOs.</i>
 
                 <br><br>
-                Enemy spawns in this mode as well as the next one are partially random and dependent on the number of players present in the match in order to reinforce replayability. 
+                Enemy spawns are dynamically altered based on difficulty settings, number of players and randomness to increase replayability. 
+
+                <img
+                src="./assets/gif/AoCspawnsDemo.gif"
+                alt="Mode selection"
+                class="project-details__showcase-img"
+                />
+                <i>In this "Ambush Lure" folder three different versions of one encounter's enemy spawns are highlighted. Individual enemies can be given custom parameters.</i>
+
               </p>
-              <img
-              src="./assets/gif/gameselect.gif"
-              alt="Mode selection"
-              class="project-details__showcase-img"
-              />
+
               <br><br>
-              <h1>Survival</h1>
+              <h1>Wave Defense</h1>
               <p class="project-details__desc-para">
-                Survival mode pits players against increasingly difficult waves of enemies. 
+                Players face increasingly difficult waves of enemies based of difficulty, player count and match pacing. Every fifth wave has a boss encounter. 
                 <br><br>
-                A dynamic system was created to modify waves according to: <b>difficulty level, player count and match pacing.</b>
-                Waves are separated into categories and each can appear depending on the current difficulty of the match. Every 5 waves, the system guarantees a Boss wave. 
+                <img
+                src="./assets/png/AoCWaveStats.png"
+                alt="Mode selection"
+                class="project-details__showcase-img"
+                />
+                <i>Here we can see a list of the possible "Tier 1" waves and boss waves that can spawn on the Easy difficulty.</i> 
               </p>
 
               <h1>Team Battle</h1>
               <p class="project-details__desc-para">
-                Team Battle mode mixes PvP and PvE in matches where each team must defend its base and destroy the enemy's.
+                PvPvE matches where two opposing teams each defend their base while attempting to destroy the opponents. Naturally, this is the mode where <b>Defensive and Offensive</b> AI behaviours are used to their full extent. 
+
+                Players can build and upgrade their defensive structures such as archer towers, barracks and walls. Player statistics are adjusted in PvP to maintain fairness. "Mimic" players are also spawned in if one team has more players than the other.
                 <br><br>
 
-                To add a strategic element and deepen defensive gameplay, players can build or upgrade structures (towers, barracks, defensive walls) in order to better protect their base. 
-                <br><br>
-
-                In order to prevent progression gaps from making fights unfair, player statistics are adjusted according to their opponents, allowing newer players to fight higher level players on equal footing.
               </p>
             </div>
 
@@ -248,8 +277,7 @@
             <div class="project-details__desc">
               <h3 class="project-details__content-title">Project Overview</h3>
               <p class="project-details__desc-para">
-                Age of Conquest is an MMORPG and action-adventure game with three distinct game modes 
-                and a large variety of content, including dozens of enemies, weapons and armor.
+                Age of Conquest is a medieval action-adventure MMORPG with a large variety of content, including dozens of enemies, weapons and armor.
                 Each game mode can be played solo or in multiplayer. The game reached a peak of <strong>140 concurrent players</strong> and received over <strong>138,000 visits</strong>.
               </p>
             </div>
@@ -277,7 +305,7 @@
 
 
               <img
-              src="./assets/png/AocPlains.png"
+              src="./assets/png/AoCWaveDefense.jpg"
               alt="Project Image"
               class="project-details__showcase-img"
               />
