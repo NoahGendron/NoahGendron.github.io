@@ -176,6 +176,7 @@
               <p class="project-details__desc-para">
                 The game's AI is highly modular in order to serve each of the three game modes. 
                 To begin with, each enemy can have different movement behaviors: 
+              </p>
                 <ul class="project-details__desc-para">
                   <li>Defensive: Protect a specific location & return to it if aggro'd</li>
                   <li>Offensive: Take a designated path towards a point</li>
@@ -184,10 +185,13 @@
                 </ul>
 
                 <br><br>
-                In combat, enemies use a shared <b>State Machine</b> across all game entities in order to read the state and distance of their opponents (player or AI) and form a combat strategy.
+                <p class="project-details__desc-para"> 
+                    In combat, enemies use a shared <b>State Machine</b> across all game entities in order to read the state and distance of their opponents (player or AI) and form a combat strategy.
+                  <br><br>
+                  This system also allows the modification of a large amount of parameters: 
+                </p>
 
-                <br><br>
-                This system also allows the modification of a large amount of parameters: 
+                
                 <ul class="project-details__desc-para">
                   <li>Movement & Attack Speed</li>
                   <li>Aggressiveness</li>
@@ -205,21 +209,22 @@
                 alt="Mode selection"
                 class="project-details__showcase-img"
                 />
-                <i>Excerpt of the behavioral and combat parameters of the enemy "Crusader"</i>
+                <i class="project-details__desc-para">Excerpt of the behavioral and combat parameters of the enemy "Crusader"</i>
                 <br><br>
                 <img
                 src="./assets/png/npc_debug.jpg"
                 alt="Mode selection"
                 class="project-details__showcase-img"
                 />
-                <i>Debug tools used to visualize AI statistics and behaviors in real time</i>
+                <i class="project-details__desc-para">Debug tools used to visualize AI statistics and behaviors in real time</i>
 
                 <br><br>
+              <p class="project-details__desc-para"> 
                 Enemy coordination rules (GroupBypassDistance, GroupAttackingThreshold) limit how many enemies can attack one player simultaneously, helping prevent unfair encounters. 
               </p>
 
 
-              <h1 class="project-details__sub">Gameplay Systems</h1>
+              <h1 class="project-details__sub">Game Modes</h1>
               
               <h1>Dungeons</h1>
               <p class="project-details__desc-para">
@@ -230,13 +235,14 @@
                   <li>Enemies defeated</li>
                   <li>Etc.</li>
                 </ul>
+                </p>
 
                 <img
                 src="./assets/png/AoCdungeonReward.png"
                 alt="Mode selection"
                 class="project-details__showcase-img"
                 />
-                <i>Parameters that determine rewarded loot. Highlighted is the percentage of the reward affected by # of enemy KOs.</i>
+                <i class="project-details__desc-para">Parameters that determine rewarded loot. Highlighted is the percentage of the reward affected by # of enemy KOs.</i>
 
                 <br><br>
                 Enemy spawns are dynamically altered based on difficulty settings, number of players and randomness to increase replayability. 
@@ -246,9 +252,9 @@
                 alt="Mode selection"
                 class="project-details__showcase-img"
                 />
-                <i>In this "Ambush Lure" folder three different versions of one encounter's enemy spawns are highlighted. Individual enemies can be given custom parameters.</i>
+                <i class="project-details__desc-para">In this "Ambush Lure" folder three different versions of one encounter's enemy spawns are highlighted. Individual enemies can be given custom parameters.</i>
 
-              </p>
+             
 
               <br><br>
               <h1>Wave Defense</h1>
@@ -268,7 +274,11 @@
                 PvPvE matches where two opposing teams each defend their base while attempting to destroy the opponents. Naturally, this is the mode where <b>Defensive and Offensive</b> AI behaviours are used to their full extent. 
 
                 Players can build and upgrade their defensive structures such as archer towers, barracks and walls. Player statistics are adjusted in PvP to maintain fairness. "Mimic" players are also spawned in if one team has more players than the other.
-                <br><br>
+                <img
+                src="./assets/png/AoCTeamBattle.jpg"
+                alt="Mode selection"
+                class="project-details__showcase-img"
+                />
 
               </p>
             </div>
