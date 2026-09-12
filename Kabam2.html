@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Noah Gendron - Portfolio</title>
+    <meta name="description" content="Developer Portfolio" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/png/StrangerArtwork.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    
+
+    <section id="projects" class="projects sec-pad">
+      <div class="main-container">
+
+           <!-- Age of Conquest -->
+
+          <div class="project-details__content">
+            <div class="project-details__content-main">
+            
+              <img
+              src="/assets/png/AoC.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+            />
+
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Age of Conquest</h3>
+              <p class="projects__row-content-desc">
+                  <strong>Role:</strong> Gameplay Designer & Programmer —  AI, 3C, combat, progression
+
+                  <br>
+
+                  <strong>Development Time:</strong> 4.5 years —  August 2020 to December 2024
+
+                  <br><br>
+
+                    <i>Age of Conquest</i> is an ambitious medieval action-adventure MMORPG.The game reached 
+                    <strong>140 concurrent players</strong> and received more than <strong>148,000 plays</strong>.              
+                  </p>  
+            </div>
+
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">My Role</h3>
+                  <ul class="project-details__desc-para">
+                    <li>Combat Designer/Programmer with 10+ weapon types</li>
+                    <li>AI Designer/Programmer of 15+ enemy types & behaviours</li>
+                    <li>Progression & Systems Designer/Programmer (loot economy, balancing, level scaling) with 100+ items</li>
+                    <li>Character Animations for over 20+ characters</li>
+                  </ul>
+            </div>
+
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Technical Overview</h3>
+                 <a
+                  href="https://youtu.be/ZaO-auvHMM"
+                  class="btn btn--med btn--theme-inv project-details__links-btn"
+                  target="_blank"
+                  >Technical Overview Video Link
+                </a> <!-- Missing link -->
+            </div>
+
+             <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Design & Systems</h3>
+
+              <h1 class="project-details__sub">Combat System</h1>
+              <p class="project-details__desc-para">
+                Age of Conquest's combat system is based on a risk/reward approach inspired by games such as <i>Sekiro: Shadows Die Twice</i>. 
+                The player can dodge, block or parry enemy attacks while managing energy and posture. 
+                <br><br>
+
+                <img
+                src="./assets/gif/posturebreak.gif"
+                alt="Posture system"
+                class="project-details__showcase-img"
+                />
+                
+                To balance repeated dodges, each dodge performed in succession consumes more and more energy. Additionally, the parry window becomes smaller if the ability is used multiple times within a short period. 
+                <br><br>
+                Each weapon category offers its own advantages and disadvantages in order to encourage different playstyles and dynamic combat. 
+              </p>
+
+              <h1 class="project-details__sub">Modular AI System</h1>
+              <img
+              src="./assets/gif/crusader_demo.gif"
+              alt="Crusader AI"
+              class="project-details__showcase-img"
+              />
+
+              <p class="project-details__desc-para">
+                The game's AI is highly modular in order to serve each of the three game modes. 
+                To begin with, each enemy can have different movement behaviors: 
+              </p>
+                <ul class="project-details__desc-para">
+                  <li>Defensive: Protect a specific location & return to it if aggro'd</li>
+                  <li>Offensive: Take a designated path towards a point</li>
+                  <li>Wandering: Patrol around a limited area</li>
+                  <li>Following: Follow a moving target (player or AI)</li>
+                </ul>
+
+                <br><br>
+                <p class="project-details__desc-para"> 
+                    In combat, enemies use a shared <b>State Machine</b> across all game entities in order to read the state and distance of their opponents (player or AI) and form a combat strategy. This system also allows the modification of a large amount of parameters such as: 
+                </p>
+
+                
+                <ul class="project-details__desc-para">
+                  <li>Movement & Attack Speed</li>
+                  <li>Aggressiveness</li>
+                  <li>Attack & Aggro range</li>
+                  <li>Field of View (and if sight is required to aggro)</li>
+                  <li>Resistances/Defense</li>
+                  <li>Target type (player, AI, structure or all)</li>
+                  <li>Attack behaviour in groups</li>
+                  <li>Status Effect immunities & inflictions</li>
+                </ul>
+                <br><br>
+                <img
+                src="./assets/png/crusader_stats.png"
+                alt="Mode selection"
+                class=""
+                /><br>
+                <i class="project-details__desc-para">Excerpt of the behavioral and combat parameters of the enemy "Crusader"</i>
+                <br><br>
+                <img
+                src="./assets/png/npc_debug.jpg"
+                alt="Mode selection"
+                class="project-details__showcase-img"
+                />
+                <i class="project-details__desc-para">Debug tools used to visualize AI statistics and behaviors in real time</i>
+
+                <br><br>
+              <p class="project-details__desc-para"> 
+                Enemy coordination rules (GroupBypassDistance, GroupAttackingThreshold) limit how many enemies can attack one player simultaneously, helping prevent unfair encounters. 
+              </p>
+
+
+              <h1 class="project-details__sub">Game Modes</h1>
+              
+              <h1>Dungeons</h1>
+              <p class="project-details__desc-para">
+                PvE-oriented mode with distinct objectives and events. A dungeon's rewards are determined by: 
+                <ul class="project-details__desc-para">
+                  <li>Time taken for completion</li>
+                  <li>Player deaths</li>
+                  <li>Enemies defeated</li>
+                  <li>Victory or defeat</li>
+                </ul>
+                </p>
+
+                <img
+                src="./assets/png/AoCdungeonReward.png"
+                alt="Mode selection"
+                class=""
+                /> <br>
+                <i class="project-details__desc-para">Parameters that determine rewarded loot. Highlighted is the percentage of the reward affected by # of enemy KOs.</i>
+
+                <br><br>
+                Enemy spawns are dynamically altered based on difficulty settings, number of players and randomness to increase replayability. 
+
+                <img
+                src="./assets/gif/AoCspawnsDemo.gif"
+                alt="Mode selection"
+                class="project-details__showcase-img"
+                />
+                <i class="project-details__desc-para">In this "Ambush Lure" folder three different versions of one encounter's enemy spawns are highlighted. Individual enemies can be given custom parameters.</i>
+
+             
+
+              <br><br>
+              <h1>Wave Defense</h1>
+              <p class="project-details__desc-para">
+                Players face increasingly difficult waves of enemies based on difficulty, player count and match pacing. Every fifth wave has a boss encounter. 
+                <br><br>
+                <img
+                src="./assets/png/AoCWaveDefense.jpg"
+                alt="Mode selection"
+                class="project-details__showcase-img"
+                />
+                <i>Here we can see a list of the possible "Tier 1" waves and boss waves that can spawn on the Easy difficulty.</i> 
+              </p>
+
+              <h1>Team Battle</h1>
+              <p class="project-details__desc-para">
+                PvPvE matches where two opposing teams each defend their base while attempting to destroy the opponents. Naturally, this is the mode where <b>Defensive and Offensive</b> AI behaviours are used to their full extent. 
+
+                Players can build and upgrade their defensive structures such as archer towers, barracks and walls. Player statistics are adjusted in PvP to maintain fairness. "Mimic" players are also spawned in if one team has more players than the other.
+                <img
+                src="./assets/png/AoCTeamBattle.jpg"
+                alt="Mode selection"
+                class="project-details__showcase-img"
+                />
+
+              </p>
+            </div>
+
+          
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Project Overview</h3>
+              <p class="project-details__desc-para">
+                Age of Conquest is an MMORPG and action-adventure game with three distinct game modes 
+                and a large variety of content, including dozens of enemies, weapons and armor.
+                Each game mode can be played solo or in multiplayer. The game reached a peak of <strong>140 concurrent players</strong> and received over <strong>148,000 visits</strong>.
+              </p>
+            </div>
+
+
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Game Excerpts</h3>
+
+              
+              <div class="project-details__tools-used">
+                 <a
+                    href="https://www.youtube.com/watch?v=SFrUGAc54oI"
+                    class="btn btn--med btn--theme-inv project-details__links-btn"
+                    target="_blank"
+                    >Game Trailer Link</a
+                  >
+              </div>
+
+              <img
+              src="./assets/png/Lobby.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+              />
+
+            </div>
+           
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools Utilized</h3>
+              <div class="skills">
+                <div class="skills__skill">Lua Scripting</div>
+                <div class="skills__skill">Roblox Studio</div>
+                <div class="skills__skill">Roblox Animator Plugin</div>
+                <div class="skills__skill">Blender</div>
+                <div class="skills__skill">Trello</div>
+              </div>
+            </div>
+
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">Project Link</h3>
+
+              <a
+                href="https://www.roblox.com/games/14091994734/Age-Of-Conquest"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+                >Link to Game</a
+              >
+              <a
+                href="https://www.roblox.com/groups/4909412/Conquest-Studio#!/about"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >Group Link</a
+              >
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span></span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://github.com/NoahGendron">
+                <img
+                  class="main-footer__icon"
+                  src="/assets/png/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/noah-gendron-032233296/">
+                <img
+                  class="main-footer__icon"
+                  src="/assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Noah Gendron</h4>
+            <p class="main-footer__short-desc">
+             
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./indexEn.js"></script>
+  </body>
+</html>
