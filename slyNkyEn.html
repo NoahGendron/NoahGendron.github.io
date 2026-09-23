@@ -137,7 +137,12 @@
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Technical Overview</h3>
 
-                 
+                 <a
+                  href="https://youtu.be/ZaO-auvHMM"
+                  class="btn btn--med btn--theme-inv project-details__links-btn"
+                  target="_blank"
+                  >Technical Overview Video Link [Missing link]
+                </a> <!-- Missing link -->
             </div>
 
             <div class="project-details__tools-used">
@@ -173,17 +178,23 @@
                   <p class="project-details__desc-para">
                     <b>3C Design</b>
                     <br><br>
-                    In order to fully realized the potential of the "slinky" premise of this game, we first had to determine which capabilities of the slinky we could achieve within the competition's time constraint. 
-                    The first and main ability was the "slingshot", allowing players to launch themselves using the spring's force to reach otherwise inaccessible heights.
+                    In order to fully exploit the premise of this game, our first had to determine which capabilities of the slinky we could achieve within the competition's time constraint. 
+                    Many of these possible slinky abilities I proposed are showcased and put to use in the above preproduction documentation for planned levels. In the end, we landed on two main abilities : 
+                    <ul class="project-details__desc-para">
+                      <li>The "slingshot", an bility allowing players to launch themselves using the spring's force in order to reach otherwise inaccessible heights.</li>
+                      <li>The "rebound", a force that would fling players in the direction of their partner if they stretched too far while hanging onto a wall.</li>
+                    </ul>
+
                     <br><br>
                     <img
                     src="./assets/gif/demoSlinky.gif"
                     alt="Project Image"
                     class="project-details__showcase-img"
                     />
+                    <i>An example of players executing the "slingshot" ability.</i>
                     <br><br>
-                    However, to allow this movement, players needed the ability to create and release tension in the slinky, leading to the addition of jumping and biting, the latter allowing players to latch onto any surface.
-                    Consequently, we needed a camera angle that could clearly show the depth and height of the play space. 
+                    However, in order to allow this movement, players needed the ability to create and release tension in the slinky, leading to the addition of jumping and biting, the latter allowing players to latch onto any surface.
+                    Consequently, the project needed a camera angle that could clearly show the depth and height of the play space. 
                     We initially experimented with fixed camera angles similar to older <i>Resident Evil</i> titles, but the camera transitions created too much friction. 
                     <br><br>
                       <img
@@ -192,8 +203,9 @@
                       class="project-details__showcase-img"
                       />
                       <br><br>
-                      We therefore opted for a camera inspired by <i>Super Mario: 3D World</i>, showing the entirety of the immediate play space without interruption.
-                      This decision, however, moved us away from the competition's imposed retro theme. To counterbalance this aspect, the environments had to strongly reflect the "toy commercial" theme we had developed alongside the slinky concept.                    
+                      I therefore pitched the idea for a camera inspired by <i>Super Mario: 3D World</i>, showing the entirety of the immediate play space without interruption.
+                      This decision moved us away from the competition's retro themes, but it was more than a worthwhile tradeoff for a consistent and reliable viewpoint.
+                       To counterbalance this shift, the environments had to strongly reflect the "toy commercial" theme developed alongside the slinky concept.                    
                       <br><br>
                       <img
                       src="./assets/png/3dWorld.png"
@@ -210,7 +222,7 @@
                  <p class="project-details__desc-para">
                     <b>Level Progression</b>
                     <br><br>
-                      As a way of differentiating the levels, the second level introduces unique LDOs, mainly conveyor belts and trampolines.
+                      In order to differentiate the levels, I designed the second level with the use of unique LDOs, mainly conveyor belts and trampolines, but additional ones programmed by myself as well.
                       As onboarding, conveyor belts are first introduced without immediate danger.
                       <br><br>
                     <img
@@ -231,12 +243,37 @@
                     Throughout the level, the complexity of conveyor-related challenges progressively increases as to test the player on acquired knowledge of the slinky and LDOs at play, while always providing something new in each new encounter.
                     <br><br>
                     <img
+                    src="./assets/png/Old_Slinky_Lvl2.png"
+                    alt="Project Image"
+                    class="project-details__showcase-img"
+                    />
+                    <br><br>
+                    After that, players were finally going to make use of the rebound in this pseudo-2D section where the players used Handles (designated by orange bars here) to let their friend hang and rebound to the other side.
+                    Initially, this didn't work because the rebound functionality was made non-fuctional with the addition of the "slingshot" ability. And so, I made to use of trampolines (designated by black parts) in a different way: 
+                    I stuck them to walls and had players hug them in order to give them a vertical boost to get across. 
+                    <br><br>
+                    <img
+                    src="./assets/png/Slinky_Redesigned_Lvl2.png"
+                    alt="Project Image"
+                    class="project-details__showcase-img"
+                    />
+                    <br><br>
+                    Unfortunately, with how the player controlled worked, the slinky simply couldn't be reliably or consistently used by players to get across to the other side, even with the use of trampolines, 
+                    so I had to cut the section and instead replace it with a more perilous fall, and a slightly more advanced version of the "slingshot", in which players must perform it twice in a row. 
+                    <img
                     src="./assets/jpeg/conveyor3.jpg"
                     alt="Project Image"
                     class="project-details__showcase-img"
                     />
                     <br><br>
                     In this example, conveyor belts move obstacles towards the players while they must avoid tangling their slinky as they progress. This is one of the very last conveyor belt obstacles of the level, since it requires more coordination than previous ones.
+                    <br><br>
+
+                    <b>Conclusion</b>
+                    <br><br>
+                    This is the iterative approach to level design and escalation I strive for in my own work. 
+                    When I see an opportunity to combine existing systems to create something more interesting, I use my prototyping skills to actually test its feasibility. 
+                    The conveyor belt sequence above is a good demonstration of this process and the final result.
                  </p>
                  
             </div>
