@@ -138,6 +138,12 @@
                     <li>Progression & Systems Designer/Programmer (loot economy, balancing, level scaling) with 100+ items</li>
                     <li>Character Animations for over 20+ characters</li>
                   </ul>
+
+                  <img
+                  src="./assets/gif/inventory_demo.gif"
+                  alt="Overview of slinky"
+                  class="project-details__showcase-img"
+                  />
             </div>
 
             <div class="project-details__tools-used">
@@ -150,6 +156,165 @@
                 </a> <!-- Missing link -->
             </div>
 
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Early Development</h3>
+
+              <h1 class="project-details__sub">Combat Before</h1>
+
+              <img
+              src="./assets/gif/AoCbefore.gif"
+              alt="Crusader AI"
+              class="project-details__showcase-img"
+              />
+              <i class="project-details__desc-para">August 2021 Development footage of combat against AI</i>
+              <p class="project-details__desc-para">
+                I initally, and probably accidentally designed combat in the early stages of development as very slow and methodical, most actions relied on stamina, which was very limited. Enemies could also attack you at the same time, making openings difficult to find. 
+                Visual feedback for incoming attacks and landing hits was also lacking or non-existent, in part because I hadn't realised their importance.
+              </p>
+
+              <h1 class="project-details__sub">Game Modes Before</h1>
+              <p class="project-details__desc-para">
+                Age of Conquest was initially supposed to only feature one gamemode: <b>Team Battle</b>, a large-scale PvPvE mode in which players attempt to defeat the other team's general. 
+              </p>
+
+              <h3 class="project-details__content-title">Release Version</h3>
+
+              <h1 class="project-details__sub">Combat After</h1>
+              <p class="project-details__desc-para">
+                With hindsight and shifting trends, it became obvious that combat in our game was too slow and too restrictive, especially for large-scale battles. 
+                I leaned on inspirations such as <i>Sekiro: Shadows Die Twice</i> for a risk/reward combat system, stamina use was greatly reduced and removed entirely for regular attacks. 
+                Block and parrying were also added in order to make a more active and dynamic combat experience, which aligned more with our players' feedback. 
+                <br><br>
+
+                <img
+                src="./assets/gif/posturebreak.gif"
+                alt="Posture system"
+                class="project-details__showcase-img"
+                />
+                
+                To balance repeated dodges, each dodge performed in succession consumes more and more energy. Additionally, the parry window becomes smaller if the ability is used multiple times within a short period. 
+                <br><br>
+                Each weapon category offers its own advantages and disadvantages in order to encourage different playstyles and dynamic combat. 
+              </p>
+
+              <h1 class="project-details__sub">Modular AI System</h1>
+              <img
+              src="./assets/gif/crusader_demo.gif"
+              alt="Crusader AI"
+              class="project-details__showcase-img"
+              />
+
+              <p class="project-details__desc-para">
+                In order to compensate for a large variety of different scenarios and game modes, I had to build a highly modular AI system. 
+                To begin with, each enemy can have different movement behaviors: 
+              </p>
+                <ul class="project-details__desc-para">
+                  <li>Defensive: Protect a specific location & return to it if aggro'd</li>
+                  <li>Offensive: Take a designated path towards a point</li>
+                  <li>Wandering: Patrol around a limited area</li>
+                  <li>Following: Follow a moving target (player or AI)</li>
+                </ul>
+
+                <br><br>
+                <p class="project-details__desc-para"> 
+                    To avoid reusing code, enemies use a shared <b>State Machine</b> in combat across all game entities in order to read the state and distance of their opponents (player or AI) and form a combat strategy. This system also allows the modification of a large amount of parameters such as: 
+                </p>
+
+                
+                <ul class="project-details__desc-para">
+                  <li>Movement & Attack Speed</li>
+                  <li>Aggressiveness</li>
+                  <li>Attack & Aggro range</li>
+                  <li>Field of View (and if sight is required to aggro)</li>
+                  <li>Resistances/Defense</li>
+                  <li>Target type (player, AI, structure or all)</li>
+                  <li>Attack behaviour in groups</li>
+                  <li>Status Effect immunities & inflictions</li>
+                </ul>
+                <br><br>
+                <img
+                src="./assets/png/crusader_stats.png"
+                alt="Mode selection"
+                class=""
+                /><br>
+                <i class="project-details__desc-para">Excerpt of the behavioral and combat parameters of the enemy "Crusader"</i>
+                <br><br>
+                <img
+                src="./assets/png/npc_debug.jpg"
+                alt="Mode selection"
+                class="project-details__showcase-img"
+                />
+                <i class="project-details__desc-para">Debug tools used to visualize AI statistics and behaviors in real time</i>
+
+                <br><br>
+              <p class="project-details__desc-para"> 
+                Enemy coordination rules (GroupBypassDistance, GroupAttackingThreshold) limit how many enemies can attack one player simultaneously, helping prevent unfair encounters. 
+              </p>
+
+
+              <h1 class="project-details__sub">Game Modes After</h1>
+              <p class="project-details__desc-para"> 
+                As the game evolved with time, so did the scope. and this made way for two additional game modes to be added, both co-op and PvE only: Dungeons and Wave Defense. 
+              </p>
+
+              <h1>Dungeons</h1>
+              <p class="project-details__desc-para">
+                PvE-oriented mode with distinct objectives and events. A dungeon's rewards are determined by: 
+                <ul class="project-details__desc-para">
+                  <li>Time taken for completion</li>
+                  <li>Player deaths</li>
+                  <li>Enemies defeated</li>
+                  <li>Victory or defeat</li>
+                </ul>
+                </p>
+
+                <img
+                src="./assets/png/AoCdungeonReward.png"
+                alt="Mode selection"
+                class=""
+                /> <br>
+                <i class="project-details__desc-para">Parameters that determine rewarded loot. Highlighted is the percentage of the reward affected by # of enemy KOs.</i>
+
+                <br><br>
+                Enemy spawns are dynamically altered based on difficulty settings, number of players and randomness to increase replayability. 
+
+                <img
+                src="./assets/gif/AoCspawnsDemo.gif"
+                alt="Mode selection"
+                class="project-details__showcase-img"
+                />
+                <i class="project-details__desc-para">In this "Ambush Lure" folder three different versions of one encounter's enemy spawns are highlighted. Individual enemies can be given custom parameters.</i>
+
+             
+
+              <br><br>
+              <h1>Wave Defense</h1>
+              <p class="project-details__desc-para">
+                Players face increasingly difficult waves of enemies based on difficulty, player count and match pacing. Every fifth wave has a boss encounter. 
+                <br><br>
+                <img
+                src="./assets/png/AoCWaveDefense.jpg"
+                alt="Mode selection"
+                class="project-details__showcase-img"
+                />
+                <i>Here we can see a list of the possible "Tier 1" waves and boss waves that can spawn on the Easy difficulty.</i> 
+              </p>
+
+              <h1>Team Battle</h1>
+              <p class="project-details__desc-para">
+                PvPvE matches where two opposing teams each defend their base while attempting to destroy the opponents. Naturally, this is the mode where <b>Defensive and Offensive</b> AI behaviours are used to their full extent. 
+
+                Players can build and upgrade their defensive structures such as archer towers, barracks and walls. Player statistics are adjusted in PvP to maintain fairness. "Mimic" players are also spawned in if one team has more players than the other.
+                <img
+                src="./assets/png/AoCTeamBattle.jpg"
+                alt="Mode selection"
+                class="project-details__showcase-img"
+                />
+
+              </p>
+            </div>
+
+            <!-- old stuff 
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Design & Systems</h3>
 
@@ -287,7 +452,7 @@
                 />
 
               </p>
-            </div>
+            </div>-->
 
           
             <div class="project-details__desc">
