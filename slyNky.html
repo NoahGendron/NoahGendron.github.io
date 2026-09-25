@@ -92,7 +92,6 @@
         <div class="project-cs-hero__info">
           <p class="text-primary">
           <strong>Gagnant – Meilleur prototype, Ubisoft Game Lab 2026</strong><br>
-            Projet développé sur trois mois dans le cadre du concours Ubisoft Game Lab. 
           </p>
         </div>
         <div class="project-cs-hero__cta">
@@ -104,74 +103,35 @@
       <div class="main-container">
         <div class="project-details__content">
           <div class="project-details__showcase-img-cont">
-            <img
+          <!--<img
               src="./assets/png/SlyNky.png"
               alt="Project Image"
               class="project-details__showcase-img"
-            />
+            />-->
           </div>
 
-          <div class="project-details__desc">
-            <h3 class="project-details__content-title">Description du projet</h3>
-            <p class="project-details__desc-para">
-              Sly n' Ky : Jouet 2 en 1 est un platformeur 3D coopératif où deux joueurs incarnent les extrémités d’un jouet relié par un slinky. 
-              Les joueurs doivent apprendre à surmonter les niveaux en utilisant la tension du ressort à leur avantage, même si celle-ci amène aussi des désavantages.
-
-              <br><br>
-              
-              Développé dans le cadre du concours Ubisoft Game Lab 2026, le projet devait être jouable à un minimum de deux joueurs et utiliser uniquement la croix directionnelle ainsi que deux boutons principaux, dans l’esprit de la thématique imposée : les années 80 et 90.
-            </p>
+          <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Mon rôle</h3>
+                <ul class="project-details__desc-para">
+                    <li>Planification et conceptualisation de niveaux et mécaniques sur Miro, Fibery</li>
+                    <li>Design 3C (Habiletés du Slinky, game feel, mouvement, point de vue de caméra)</li>
+                    <li>Blocking et design de niveaux</li>
+                    <li>Prototypage de LDO pour itération rapide avec C# et Unity</li>
+                  </ul>
+            </div>
 
             <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Nominations</h3>
+              <h3 class="project-details__content-title">Survol technique</h3>
 
-              <span class="project-details__desc-para">En plus d'avoir remporté le prix du Meilleur Prototype, le jeu a été nominé pour :</span>
-              <br><br>
-
-              <div class="skills">
-                <div class="skills__skill">Meilleur Game Design</div><br>
-                <div class="skills__skill">Meilleur créativité et intégration du thème</div><br>
-                <div class="skills__skill">Meilleur qualité des '3C' (camera, characters, controls)</div><br>
-                <div class="skills__skill">Meilleur expérience utilisateur</div><br>
-                <div class="skills__skill">Meilleur innovation technique</div><br>
-              </div>
-            </div>
-
-            </div>
-
-             <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Vidéo démonstrative</h3>
-
-              <div id="ytplayer"></div>
-
-              <script>
-                  var tag = document.createElement('script');
-                  tag.src = "https://www.youtube.com/player_api";
-                  var firstScriptTag = document.getElementsByTagName('script')[0];
-                  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-                  var player;
-                  function onYouTubePlayerAPIReady() {
-                  player = new YT.Player('ytplayer', {
-                    height: '360',
-                    width: '100%', //https://youtu.be/ZaO-auvHMME
-                    videoId: 'ZaO-auvHMME'
-                  });
-                  }
-              </script>
-
+                 <a
+                  href="https://youtu.be/ZaO-auvHMM"
+                  class="btn btn--med btn--theme-inv project-details__links-btn"
+                  target="_blank"
+                  >Vidéo Technique [Lien manquant]
+                </a> <!-- Missing link -->
             </div>
 
             
-
-            <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Mon rôle</h3>
-
-                 <p class="project-details__desc-para">
-                    En tant que designer sur le projet, j'ai conceptualisé et planifié (Miro, Fibery) les capacités et mouvements possible du slinky ainsi que les contrôles et habiletés de chaque joueur. 
-                    Une fois la phase de conception terminée, mon travail s'est porté sur le design de niveau et l'implémentation et le placement de LDO (Level Design Object) ainsi que de la programmation additionnelle (C#) en lien avec ceux-ci.
-                 </p>
-            </div>
 
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Documentation de préproduction</h3>
@@ -185,68 +145,145 @@
                     alt="Overview of slinky"
                     class="project-details__showcase-img"
                     />
+                    <i>Début de concept, gameplay loop et pitch initial.</i>                 
                     <img
                     src="./assets/png/LDOcontrols.png"
                     alt="Controls & LDO"
                     class="project-details__showcase-img"
                     />
+                    <i>Contrôles, liste de LDO et leur comportements.</i>
                     <img
                     src="./assets/png/levels.png"
                     alt="2D level plans"
                     class="project-details__showcase-img"
                     /> 
+                    <i>Plans simples de niveaux 2D pour expliquer et proposer des mécaniques et scénarios d'utilisation du slinky.</i>
                  </p>
             </div>
 
 
+
             <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Approche de design</h3>
+              <h3 class="project-details__content-title">Design Approach</h3>
 
-                  <p class="project-details__desc-para">
-                    <b>Conception 3C</b>
-                    <br><br>
-                    Afin d'exploiter le plein potentiel de la prémisse du slinky, il fallait d'abord déterminer les capacités réalisables à l'intérieur des contraintes du concours. 
-                    La première fut le "slingshot", permettant aux joueurs de se propulser avec la force du ressort afin d'atteindre des hauteurs autrement inaccessibles.
-                    <br><br>
-
+ 
+                 <p class="project-details__desc-para">
+                    <b>Level Progression</b>
                     <img
-                    src="./assets/gif/demoSlinky.gif"
+                    src="./assets/jpeg/conveyor1.jpg"
                     alt="Project Image"
                     class="project-details__showcase-img"
                     />
                     <br><br>
-                    Toutefois, afin de permettre ce mouvement, il fallait donner aux joueurs la capacité de créer et relâcher une tension dans le slinky, menant à l'ajout du saut et d'une morsure permettant de s'accrocher aux surfaces.
-                    En conséquence, il fallait un angle de caméra laissant voir la profondeur et la hauteur du terrain de jeu. 
-                    Nous avons initialement expérimenté avec des plans de caméra fixes à la <i>Resident Evil</i>, mais les transitions d'angles créaient trop de friction. 
-                      <br><br>
+                    Players are then transported to a second, more dangerous section of conveyor belts where the paths split in order to encourage risk-taking and cooperation.
+                    <br><br>
+                    <img
+                    src="./assets/jpeg/conveyor2.jpg"
+                    alt="Project Image"
+                    class="project-details__showcase-img"
+                    />
+                    <br><br>
+                    In the background, another conveyor transports candies, foreshadowing an upcoming challenge. 
+                    Throughout the level, the complexity of conveyor-related challenges progressively increases as to test the player on acquired knowledge of the slinky and LDOs at play, while always providing something new in each new encounter.
+                    <br><br>
+                    <img
+                    src="./assets/png/Old_Slinky_Lvl2.png"
+                    alt="Project Image"
+                    class="project-details__showcase-img"
+                    />
+                    <br><br>
+                    After that, players were finally going to make use of the rebound in this pseudo-2D section where the players used Handles (designated by orange bars here) to let their friend hang and rebound to the other side.
+                    Initially, this didn't work because the rebound functionality was made non-fuctional with the addition of the "slingshot" ability. And so, I made to use of trampolines (designated by black parts) in a different way: 
+                    I stuck them to walls and had players hug them in order to give them a vertical boost to get across. 
+                    <br><br>
+                    <img
+                    src="./assets/png/Slinky_Redesigned_Lvl2.png"
+                    alt="Project Image"
+                    class="project-details__showcase-img"
+                    />
+                    <br><br>
+                    Unfortunately, with how the player controlled worked, the slinky simply couldn't be reliably or consistently used by players to get across to the other side, even with the use of trampolines, 
+                    so I had to cut the section and instead replace it with a more perilous fall, and a slightly more advanced version of the "slingshot", in which players must perform it twice in a row. 
+                    <img
+                    src="./assets/jpeg/conveyor3.jpg"
+                    alt="Project Image"
+                    class="project-details__showcase-img"
+                    />
+                    <br><br>
+                    In this example, conveyor belts move obstacles towards the players while they must avoid tangling their slinky as they progress. This is one of the very last conveyor belt obstacles of the level, since it requires more coordination than previous ones.
+                    <br><br>
 
-                      <img
-                      src="./assets/jpeg/slinkyFixedCam.jpg"
-                      alt="Project Image"
-                      class="project-details__showcase-img"
-                      />
-                      <br><br>
-                      Nous avons donc opté pour une caméra inspirée de <i>Super Mario: 3D World</i>, présentant l'ensemble du terrain de jeu immédiat sans interruption.
-                      Cette décision nous éloignait toutefois du thème rétro du concours. Afin de contrebalancer cet aspect, les environnements ont été orientés vers une esthétique de publicité de jouets.                    
-                      <br><br>
+                    <b>Conclusion</b>
+                    <br><br>
+                    This is the iterative approach to level design and escalation I strive for in my own work. 
+                    When I see an opportunity to combine existing systems to create something more interesting, I use my prototyping skills to actually test its feasibility. 
+                    The conveyor belt sequence above is a good demonstration of this process and the final result.
+                 </p>
+                 
+            </div>
+            
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Approche de design</h3>
 
-                      <img
-                      src="./assets/png/3dWorld.png"
-                      alt="Project Image"
-                      class="project-details__showcase-img"
-                      />
-                      <img
-                      src="./assets/gif/outroSlinky.gif"
-                      alt="Project Image"
-                      class="project-details__showcase-img"
-                      />
-                  </p>
+                <p class="project-details__desc-para">
+                  <b>Conception 3C</b>
+                  <br><br>
+                  Afin d'exploiter le plein potentiel de la prémisse du slinky, il fallait d'abord déterminer les capacités réalisables à l'intérieur des contraintes du concours. 
+                  Plusieurs des habiletés que j'ai proposées sont présentées dans la documentation de préproduction ci-dessous pour des niveaux planifiés. Au final, nous avons choisi les trois habiletés suivantes pour notre jeu :
+                  
+                  <ul class="project-details__desc-para">
+                    <li>Le « slingshot », une habileté laissant le joueur se propulser en utilisant la force du ressort afin d'atteindre des hauteurs autrement inaccessibles.</li>
+                    <li>Le « rebound », une force qui lance un des deux joueurs dans les airs si le slinky est trop étiré lorsque les joueurs suspendue au-dessus du vide et qu'un des deux joueurs soit accroché au mur.</li>
+                    <!--<li>Le « grab » permet justement aux deux joueurs de s'aggripper à toutes les surfaces, et même de déplacer des objets moins lourds.</li> -->
+                  </ul>
+
+                  <br><br>
+
+                  <img
+                  src="./assets/gif/demoSlinky.gif"
+                  alt="Project Image"
+                  class="project-details__showcase-img"
+                  />
+                  <i>Un example des joueurs exécutant l'habileté « slingshot » du slinky.</i>
+                  <br><br>
+                  Toutefois, afin de permettre ces mouvements, il fallait donner aux joueurs la capacité de créer et relâcher une tension dans le slinky, menant à l'ajout du saut et d'une morsure (grab).
+                  En conséquence, il fallait un angle de caméra laissant voir la profondeur et la hauteur du terrain de jeu. 
+                  Nous avons initialement expérimenté avec des plans de caméra fixes similaire aux premiers <i>Resident Evil</i>, mais les transitions d'angles créaient trop de friction. 
+
+                  <br><br>
+
+                  <img
+                  src="./assets/jpeg/slinkyFixedCam.jpg"
+                  alt="Project Image"
+                  class="project-details__showcase-img"
+                  />
+                  <br><br>
+                  I therefore pitched the idea for a camera inspired by <i>Super Mario: 3D World</i>, showing the entirety of the immediate play space without interruption.
+                  This decision moved us away from the competition's retro themes, but it was more than a worthwhile tradeoff for a consistent and reliable viewpoint.
+                  To counterbalance this shift, the environments had to strongly reflect the "toy commercial" theme developed alongside the slinky concept.  
+                  
+                  J'ai donc proposé l'idée d'une caméra inspiré par <i>Super Mario: 3D World</i>, présentant l'ensemble du terrain de jeu à tous moments sans interruption ou manque de continuité. 
+                  Cette decision nous a éloigné du thème rétro que le concours exigeait, mais le compromis en valait la peine pour un point de vue plus fiable et constant. 
+                  Pour contrebalancer ce changement, les environnements ont été orientés vers une esthétique de publicité de jouets similaires à ceux des années 80 et 90.                    
+                  <br><br>
+
+                  <img
+                  src="./assets/png/3dWorld.png"
+                  alt="Project Image"
+                  class="project-details__showcase-img"
+                  />
+                  <img
+                  src="./assets/gif/outroSlinky.gif"
+                  alt="Project Image"
+                  class="project-details__showcase-img"
+                  />
+                </p>
 
                  <p class="project-details__desc-para">
                     <b>Progression de niveaux</b>
                     <br><br>
-                      Afin de différencier les niveaux, le second introduit des LDO uniques, principalement les tapis roulants (conveyor belts) et les trampolines.
-                      Comme onboarding, les tapis roulants sont d'abord introduits sans danger immédiat.
+                      Afin de différencier les niveaux, j'ai conceptualisé le deuxième niveau avec l'utilisation de LDO uniques, principalement les tapis roulants (conveyor belts) et les trampolines, en plus de LDOs additionnels que j'ai programmé moi-même.
+                      Comme onboarding, les tapis roulants sont d'abord introduits sans danger immédiat :
                      <br><br>
                     <img
                     src="./assets/jpeg/conveyor1.jpg"
@@ -266,18 +303,66 @@
                     En arrière-plan, une autre piste transporte des bonbons, annonçant un défi à venir. 
                     Au fil du niveau, la complexité des défis liés aux tapis roulants augmente progressivement afin de testé les joueurs sur leur apprentissages des contrôles et des LDO acquis à chaque nouveau défi. 
                     <br><br>
-
+                    <img
+                    src="./assets/png/Old_Slinky_Lvl2.png"
+                    alt="Project Image"
+                    class="project-details__showcase-img"
+                    />
+                    <br><br>
+                    Ensuite, les joueurs doivent enfin faire utilisation du « rebound » dans cette section pseudo-2D où ils doivent utiliser les poignées (désignées ici par les barres oranges) pour laisser leur partenaire se suspendre et « rebound » jusqu'à l'autre côté. 
+                    Initiallement, cette section ne fonctionnait pas à cause que la mécanique de « rebound » ne marchait pas correctement pendant une partie du développement suite à l'addition du « slingshot ». 
+                    Alors, j'ai fait utilisation des trampolines (désignés par des carrés noirs) d'une manière non traditionnels :
+                    Je les ai collés au mur et lorsque les joueurs les frappaient en descendant, ils donnaient une force vertical qui remplaçait la fonction du « rebound ». 
+                    <br><br>
+                    <img
+                    src="./assets/png/Slinky_Redesigned_Lvl2.png"
+                    alt="Project Image"
+                    class="project-details__showcase-img"
+                    />
+                    <br><br>
+                    Malheureusement, avec le fonctionnement du player controller, le slinky était incapable d'atteindre l'autre côté de manière assez fiable ou constante pour que les joueurs l'utilisent, même avec les trampolines, 
+                    alors j'ai du couper cette section du niveau et la remplacer avec une chute plus périlleuse et une utilisation du « slingshot » plus avancée, dans lequel les joueurs doivent le performer deux fois de suite. 
+                    <br><br>
                     <img
                     src="./assets/jpeg/conveyor3.jpg"
                     alt="Project Image"
                     class="project-details__showcase-img"
                     />
                     <br><br>                
-
-                    Dans cet exemple, les tapis roulants déplacent des obstacles à contre-courant alors que les joueurs doivent éviter d'emmêler leur slinky tout en progressant.
+                    Dans cette autre section, les tapis roulants déplacent des obstacles à contre-courant alors que les joueurs doivent éviter d'emmêler leur slinky tout en progressant.
                  </p>
                  
             </div>
+
+            
+            <!-- Superfluous stuff -->
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Description du projet</h3>
+              <p class="project-details__desc-para">
+                Sly n' Ky : Jouet 2 en 1 est un platformeur 3D coopératif où deux joueurs incarnent les extrémités d’un jouet relié par un slinky. 
+                Les joueurs doivent apprendre à surmonter les niveaux en utilisant la tension du ressort à leur avantage, même si celle-ci amène aussi des désavantages.
+
+                <br><br>
+                
+                Développé dans le cadre du concours Ubisoft Game Lab 2026, le projet devait être jouable à un minimum de deux joueurs et utiliser uniquement la croix directionnelle ainsi que deux boutons principaux, dans l’esprit de la thématique imposée : les années 80 et 90.
+              </p>
+
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Nominations</h3>
+
+              <span class="project-details__desc-para">En plus d'avoir remporté le prix du Meilleur Prototype, le jeu a été nominé pour :</span>
+              <br><br>
+
+              <div class="skills">
+                <div class="skills__skill">Meilleur Game Design</div><br>
+                <div class="skills__skill">Meilleur créativité et intégration du thème</div><br>
+                <div class="skills__skill">Meilleur qualité des '3C' (camera, characters, controls)</div><br>
+                <div class="skills__skill">Meilleur expérience utilisateur</div><br>
+                <div class="skills__skill">Meilleur innovation technique</div><br>
+              </div>
+            </div>
+
+          </div>
 
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Extraits du jeu</h3>
