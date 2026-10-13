@@ -138,32 +138,44 @@
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Technical Overview</h3>
 
-                 <a
-                  href="https://youtu.be/ZaO-auvHMM"
-                  class="btn btn--med btn--theme-inv project-details__links-btn"
-                  target="_blank"
-                  >Technical Overview Video Link [Missing link]
-                </a> <!-- Missing link -->
+              <div id="ytplayer">
+              </div>
+
+              <script>
+                  var tag = document.createElement('script');
+                  tag.src = "https://www.youtube.com/player_api";
+                  var firstScriptTag = document.getElementsByTagName('script')[0];
+                  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                  var player;
+                  function onYouTubePlayerAPIReady() {
+                  player = new YT.Player('ytplayer', {
+                    height: '360',
+                    width: '100%', 
+                    videoId: 'ZaO-auvHMME'
+                  });
+                  }
+              </script>
             </div>
 
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Preproduction Documentation</h3>
 
                  <p class="project-details__desc-para">
-                    Documentation excerpts created during the conception phase: controls, slinky abilities, LDO list, and 2D plans for possible levels.                    
+                    Documentation excerpts created during the conception phase: controls, Level Design Object (LDO) list, and 2D plans for possible levels.                    
                     <br><br>
                     <img
-                    src="./assets/png/SLINKYcapabilities.png"
+                    src="./assets/png/controls.png"
                     alt="Overview of slinky"
                     class="project-details__showcase-img"
                     />
-                    <i>Early concept, gameplay loop and initial pitch.</i>
+                    <i>Control mapping.</i>
                     <img
-                    src="./assets/png/LDOcontrols.png"
-                    alt="Controls & LDO"
+                    src="./assets/png/Ldo.png"
+                    alt="LDO"
                     class="project-details__showcase-img"
                     />
-                    <i>Controls, list of LDOs & their behaviours.</i>
+                    <i>Controls, list of Level Design Objects & their behaviours.</i>
                     <img
                     src="./assets/png/levels.png"
                     alt="2D level plans"
