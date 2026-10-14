@@ -130,24 +130,9 @@
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Survol technique</h3>
 
-                <div id="ytplayer_demo">
+                <div id="ytplayer_2">
                 </div>
 
-                <script>
-                    var tag = document.createElement('script');
-                    tag.src = "https://www.youtube.com/player_api";
-                    var firstScriptTag = document.getElementsByTagName('script')[0];
-                    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-                    var player;
-                    function onYouTubePlayerAPIReady() {
-                    player = new YT.Player('ytplayer_demo', {
-                      height: '360',
-                      width: '100%', 
-                      videoId: 'NmRcBv-wowo'
-                    });
-                    }
-                </script>
             </div>
 
 
@@ -268,23 +253,7 @@
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Bande-Annonce de sortie</h3>
 
-              <div id="ytplayer"></div>
-
-              <script>
-                  var tag = document.createElement('script');
-                  tag.src = "https://www.youtube.com/player_api";
-                  var firstScriptTag = document.getElementsByTagName('script')[0];
-                  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-                  var player;
-                  function onYouTubePlayerAPIReady() {
-                  player = new YT.Player('ytplayer', {
-                    height: '360',
-                    width: '100%', //https://youtu.be/TCx65yQFZxc
-                    videoId: 'SFrUGAc54oI'
-                  });
-                  }
-              </script>
+              <div id="ytplayer_1"></div>
 
             </div>
             
@@ -305,6 +274,31 @@
               />
 
             </div>
+
+            <script>
+              var player1;
+              var player2;
+
+              var tag = document.createElement('script');
+              tag.src = "https://www.youtube.com/player_api";
+
+              var firstScriptTag = document.getElementsByTagName('script')[0];
+              firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+              function onYouTubePlayerAPIReady() {
+                  player1 = new YT.Player('ytplayer_1', {
+                      height: '360',
+                      width: '100%',
+                      videoId: 'OQIRCP7eQO0'
+                  });
+
+                  player2 = new YT.Player('ytplayer_2', {
+                      height: '360',
+                      width: '100%',
+                      videoId: 'NmRcBv-wowo'
+                  });
+              }
+          </script>
 
             
             <div class="project-details__tools-used">

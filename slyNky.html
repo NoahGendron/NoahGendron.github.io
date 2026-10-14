@@ -123,24 +123,8 @@
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Survol technique</h3>
 
-                <div id="ytplayer_demo">
+                <div id="ytplayer_2">
                 </div>
-
-                <script>
-                    var tag = document.createElement('script');
-                    tag.src = "https://www.youtube.com/player_api";
-                    var firstScriptTag = document.getElementsByTagName('script')[0];
-                    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-                    var player;
-                    function onYouTubePlayerAPIReady() {
-                    player = new YT.Player('ytplayer_demo', {
-                      height: '360',
-                      width: '100%', 
-                      videoId: 'OQIRCP7eQO0'
-                    });
-                    }
-                </script>
             </div>
 
             
@@ -379,6 +363,12 @@
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Extraits du jeu</h3>
 
+              <!--Gameplay Video -->
+              <div class="project-details__tools-used">
+                <div id="ytplayer_1">
+                </div>
+              </div>
+
               <img
               src="./assets/gif/introSlinky.gif"
               alt="Project Image"
@@ -390,8 +380,33 @@
               alt="Project Image"
               class="project-details__showcase-img"
               />
-
             </div>
+
+            <script>
+              var player1;
+              var player2;
+
+              var tag = document.createElement('script');
+              tag.src = "https://www.youtube.com/player_api";
+
+              var firstScriptTag = document.getElementsByTagName('script')[0];
+              firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+              function onYouTubePlayerAPIReady() {
+                  player1 = new YT.Player('ytplayer_1', {
+                      height: '360',
+                      width: '100%',
+                      videoId: 'OQIRCP7eQO0'
+                  });
+
+                  player2 = new YT.Player('ytplayer_2', {
+                      height: '360',
+                      width: '100%',
+                      videoId: 'NmRcBv-wowo'
+                  });
+              }
+          </script>
+
 
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Tâches Réalisées</h3>
